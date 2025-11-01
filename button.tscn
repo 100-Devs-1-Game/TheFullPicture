@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://c6takejyrn2f3"]
-
-[node name="Button" type="Button"]
-anchors_preset = -1
-anchor_right = 0.15
-anchor_bottom = 0.10700001
-offset_right = 5.199997
-offset_bottom = 22.663994
-text = "test"
