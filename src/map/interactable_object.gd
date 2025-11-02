@@ -1,0 +1,2 @@
+class_name InteractableObject
+extends CollisionPolygon2D
