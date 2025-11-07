@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctyl2pf5eellh"]
+
+[ext_resource type="Script" uid="uid://cq42i34738iwi" path="res://map/interactable_object.gd" id="1_2swy8"]
+
+[node name="InteractableObject" type="StaticBody2D"]
+script = ExtResource("1_2swy8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

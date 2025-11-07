@@ -1,3 +1,33 @@
-[gd_scene format=3 uid="uid://j03f4fj76s3c"]
+[gd_scene load_steps=12 format=3 uid="uid://j03f4fj76s3c"]
+
+[ext_resource type="Script" uid="uid://bso3q0dg4imyy" path="res://map/map.gd" id="1_hgrid"]
+[ext_resource type="Script" uid="uid://d2wotlyy2ygk5" path="res://map/image_collection.gd" id="2_7lyie"]
+[ext_resource type="Texture2D" uid="uid://ctehf7uoivrex" path="res://assets/map/stage1_01.png" id="3_112ik"]
+[ext_resource type="Texture2D" uid="uid://dduvtd50tpcdi" path="res://assets/map/stage1_02.png" id="4_i5grx"]
+[ext_resource type="Texture2D" uid="uid://cuw3mresw1vfx" path="res://assets/map/stage1_03.png" id="5_lct0g"]
+[ext_resource type="Texture2D" uid="uid://jm18q7ivke16" path="res://assets/map/stage1_04.png" id="6_k8tny"]
+[ext_resource type="Texture2D" uid="uid://cx5xf4maqrw7c" path="res://assets/map/stage1_05.png" id="7_ap8vc"]
+[ext_resource type="Script" uid="uid://ckh7odp14lx2f" path="res://map/mouse_tracker.gd" id="7_kxmgb"]
+[ext_resource type="Texture2D" uid="uid://b6e3s2rn8o4vc" path="res://assets/map/stage1_06.png" id="8_wnugf"]
+[ext_resource type="Script" uid="uid://k7nlgv50cog1" path="res://map/camera.gd" id="9_112ik"]
+
+[sub_resource type="Resource" id="Resource_58xwf"]
+script = ExtResource("2_7lyie")
+images = Array[Texture2D]([ExtResource("3_112ik"), ExtResource("4_i5grx"), ExtResource("5_lct0g"), ExtResource("6_k8tny"), ExtResource("7_ap8vc"), ExtResource("8_wnugf")])
+metadata/_custom_type_script = "uid://d2wotlyy2ygk5"
 
 [node name="Map" type="Node2D"]
+script = ExtResource("1_hgrid")
+map_size = null
+columns = 3
+stages = Array[ExtResource("2_7lyie")]([SubResource("Resource_58xwf")])
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("9_112ik")
+
+[node name="Mouse Tracker" type="Node2D" parent="."]
+script = ExtResource("7_kxmgb")
+
+[node name="Canvas" type="Node2D" parent="."]
+
+[node name="Interactable Objects" type="Node2D" parent="."]
