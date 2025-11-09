@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://kp753uc0u53o"
+path="res://.godot/imported/The Full Picture - Sentence.mp3-cc7b6c850ad34195791c3b4732f29652.mp3str"
+
+[deps]
+
+source_file="res://assets/music/The Full Picture - Sentence.mp3"
+dest_files=["res://.godot/imported/The Full Picture - Sentence.mp3-cc7b6c850ad34195791c3b4732f29652.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfrc1km6sy0ap"
+path="res://.godot/imported/The Full Picture - Exploration.mp3-ed30050e9a48f8be9228f0bffe141962.mp3str"
+
+[deps]
+
+source_file="res://assets/music/The Full Picture - Exploration.mp3"
+dest_files=["res://.godot/imported/The Full Picture - Exploration.mp3-ed30050e9a48f8be9228f0bffe141962.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
