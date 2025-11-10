@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://j03f4fj76s3c"]
+[gd_scene load_steps=19 format=3 uid="uid://j03f4fj76s3c"]
 
 [ext_resource type="Script" uid="uid://bso3q0dg4imyy" path="res://map/map.gd" id="1_hgrid"]
 [ext_resource type="Script" uid="uid://d2wotlyy2ygk5" path="res://map/image_collection.gd" id="2_7lyie"]
@@ -12,6 +12,10 @@
 [ext_resource type="Script" uid="uid://k7nlgv50cog1" path="res://map/camera.gd" id="9_112ik"]
 [ext_resource type="Texture2D" uid="uid://mm8lug52xxwm" path="res://assets/art/map/stage2_02.png" id="9_lct0g"]
 [ext_resource type="Texture2D" uid="uid://dnlmxidwefra7" path="res://assets/art/map/stage2_05.png" id="10_k8tny"]
+[ext_resource type="Texture2D" uid="uid://bqp7mpvhf87mr" path="res://assets/art/mouse/Mouse_neutral.png" id="13_ap8vc"]
+[ext_resource type="Texture2D" uid="uid://bfxmds21iqq82" path="res://assets/art/mouse/Mouse_hover.png" id="14_wnugf"]
+[ext_resource type="PackedScene" uid="uid://ctyl2pf5eellh" path="res://map/interactable_object.tscn" id="15_58xwf"]
+[ext_resource type="Resource" uid="uid://dv607luiiy844" path="res://data/resources/objects/body.tres" id="16_w1ifk"]
 
 [sub_resource type="Resource" id="Resource_58xwf"]
 script = ExtResource("2_7lyie")
@@ -33,7 +37,17 @@ script = ExtResource("9_112ik")
 
 [node name="Mouse Tracker" type="Node2D" parent="."]
 script = ExtResource("7_kxmgb")
+icon_default = ExtResource("13_ap8vc")
+icon_hover = ExtResource("14_wnugf")
 
 [node name="Canvas" type="Node2D" parent="."]
 
 [node name="Interactable Objects" type="Node2D" parent="."]
+
+[node name="Body" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+data = ExtResource("16_w1ifk")
+
+[node name="CollisionPolygon2D" parent="Interactable Objects/Body" index="0"]
+polygon = PackedVector2Array(1395, 1039, 1411, 966, 1473, 967, 1479, 1025, 1459, 1041)
+
+[editable path="Interactable Objects/Body"]
