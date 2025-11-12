@@ -1,8 +1,6 @@
 extends Node2D
 
-@export var icon_default: Texture2D
-@export var icon_hover: Texture2D
-@export var icon_pressed: Texture2D
+
 
 
 var point_query:= PhysicsPointQueryParameters2D.new()
@@ -29,9 +27,9 @@ func _physics_process(_delta: float) -> void:
 
 func enter_object():
 	prints("Enter object", hovering_over.name)
-	Input.set_custom_mouse_cursor(icon_hover)
+	EventManager.mouse_hover.emit()
 
 
 func exit_object():
 	print("Exit object")
-	Input.set_custom_mouse_cursor(icon_default)
+	EventManager.mouse_unhover.emit()
