@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2dutbrg4w40c"]
+
+[ext_resource type="Texture2D" uid="uid://irb4efyj7vgt" path="res://assets/art/ui/checkbox_marked.png" id="1_xwx6y"]
+[ext_resource type="Texture2D" uid="uid://dqysygmpydhmi" path="res://assets/art/ui/checkbox_blank.png" id="2_vt6f5"]
+
+[node name="CheckBox" type="CheckBox"]
+theme_override_icons/checked = ExtResource("1_xwx6y")
+theme_override_icons/unchecked = ExtResource("2_vt6f5")
