@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Full Picture"
-run/main_scene="uid://j03f4fj76s3c"
+run/main_scene="uid://g27joj15rp4e"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 EventManager="*res://global/event_manager.gd"
 MouseCursorController="*res://global/mouse_cursor_controller.tscn"
+SceneLoader="*res://global/scene_loader.tscn"
 
 [display]
 

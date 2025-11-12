@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://g27joj15rp4e"]
+
+[ext_resource type="Script" uid="uid://1k4607d50hx3" path="res://global/scene_loader.gd" id="1_aagan"]
+[ext_resource type="PackedScene" uid="uid://dctujakcy61p2" path="res://menus/main_menu.tscn" id="2_bkc7g"]
+[ext_resource type="PackedScene" uid="uid://j03f4fj76s3c" path="res://map/map.tscn" id="3_sjw1y"]
+[ext_resource type="PackedScene" uid="uid://bcv0rlobvwr7t" path="res://ui/game_panel/game_panel.tscn" id="4_hwx0j"]
+
+[node name="SceneLoader" type="Node"]
+script = ExtResource("1_aagan")
+skip_main_menu = true
+main_menu_scene = ExtResource("2_bkc7g")
+map_scene = ExtResource("3_sjw1y")
+game_panel_scene = ExtResource("4_hwx0j")
