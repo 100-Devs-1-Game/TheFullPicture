@@ -1,15 +1,22 @@
-[gd_scene load_steps=11 format=3 uid="uid://bcv0rlobvwr7t"]
+[gd_scene load_steps=14 format=3 uid="uid://bcv0rlobvwr7t"]
 
 [ext_resource type="Script" uid="uid://ql1qy0kjohly" path="res://ui/game_panel/game_panel.gd" id="1_yn0q5"]
 [ext_resource type="ButtonGroup" uid="uid://bjwginnhmnc78" path="res://ui/game_panel/panel_button_group.tres" id="2_hlndb"]
 [ext_resource type="PackedScene" uid="uid://bdm23kuuc3m74" path="res://ui/components/menu_button.tscn" id="2_lxin7"]
+[ext_resource type="Texture2D" uid="uid://bguk7yhbwj8ps" path="res://assets/art/ui/panel_frame_filled.png" id="2_ng428"]
+[ext_resource type="StyleBox" uid="uid://cp1ijl3m6dhr1" path="res://ui/paper_background.stylebox" id="3_ifxwd"]
 [ext_resource type="Texture2D" uid="uid://bdqtk4an3o77d" path="res://assets/art/sentence_builder/clue-text.png" id="3_lxin7"]
 [ext_resource type="Texture2D" uid="uid://bg786xnmmnawi" path="res://assets/art/sentence_builder/button-blank.png" id="4_4gmb1"]
 [ext_resource type="Texture2D" uid="uid://donm13ryso7sc" path="res://assets/art/sentence_builder/button-press.png" id="5_hnn45"]
 [ext_resource type="Script" uid="uid://biajfv665ttlc" path="res://ui/components/hover_component.gd" id="5_lxin7"]
+[ext_resource type="Texture2D" uid="uid://rafjpx4rpgrd" path="res://assets/art/sentence_builder/button-blank_red.png" id="6_nuau5"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hlndb"]
-bg_color = Color(0.22911215, 0.22911218, 0.22911206, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1fep8"]
+texture = ExtResource("2_ng428")
+texture_margin_left = 35.0
+texture_margin_top = 35.0
+texture_margin_right = 35.0
+texture_margin_bottom = 35.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_ng428"]
 font_size = 50
@@ -28,24 +35,19 @@ anchor_bottom = 1.0
 offset_top = -200.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_hlndb")
+theme_override_styles/panel = SubResource("StyleBoxTexture_1fep8")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 20
 
 [node name="Words" type="PanelContainer" parent="Panel/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_styles/panel = ExtResource("3_ifxwd")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Words"]
 layout_mode = 2
-theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/Words/MarginContainer"]
@@ -82,7 +84,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 toggle_mode = true
 button_group = ExtResource("2_hlndb")
-texture_normal = ExtResource("3_lxin7")
+texture_normal = ExtResource("6_nuau5")
 texture_pressed = ExtResource("3_lxin7")
 
 [node name="Label" type="Label" parent="Panel/Toggle Buttons/Sentence Button"]
