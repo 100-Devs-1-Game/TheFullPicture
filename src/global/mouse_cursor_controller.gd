@@ -12,6 +12,8 @@ func _ready() -> void:
 	EventManager.mouse_drag.connect(on_mouse_drag)
 	EventManager.mouse_release.connect(on_mouse_reset)
 
+	Input.set_custom_mouse_cursor(icon_hover, Input.CURSOR_POINTING_HAND)
+
 
 func on_mouse_hover():
 	Input.set_custom_mouse_cursor(icon_hover)
