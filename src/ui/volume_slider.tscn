@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://qkrpor4fycdq"]
+[gd_scene load_steps=5 format=3 uid="uid://qkrpor4fycdq"]
 
 [ext_resource type="Texture2D" uid="uid://b7c6f77qvl6ap" path="res://assets/art/sentence_builder/slider_neutral.png" id="1_3qf2g"]
 [ext_resource type="Texture2D" uid="uid://dr5rdysqht4tq" path="res://assets/art/sentence_builder/slider_hold.png" id="2_2ouuc"]
+[ext_resource type="Texture2D" uid="uid://bs4qj0snikoy" path="res://assets/art/ui/Slider.png" id="3_2ouuc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dt855"]
+texture = ExtResource("3_2ouuc")
 
 [node name="HSlider" type="HSlider"]
+custom_minimum_size = Vector2(750, 0)
 theme_override_icons/grabber = ExtResource("1_3qf2g")
 theme_override_icons/grabber_highlight = ExtResource("2_2ouuc")
+theme_override_styles/slider = SubResource("StyleBoxTexture_dt855")
 max_value = 1.0
 step = 0.01
 value = 0.5
