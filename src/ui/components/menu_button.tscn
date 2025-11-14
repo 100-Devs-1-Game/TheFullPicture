@@ -1,12 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdm23kuuc3m74"]
+[gd_scene load_steps=8 format=3 uid="uid://bdm23kuuc3m74"]
 
 [ext_resource type="Texture2D" uid="uid://cx6nwy0ar1df6" path="res://assets/art/ui/UI button.png" id="1_6182c"]
 [ext_resource type="Texture2D" uid="uid://dsn5ghw6d2av5" path="res://assets/art/ui/UI hover.png" id="2_3lon3"]
 [ext_resource type="Texture2D" uid="uid://dpbustpf6nuvc" path="res://assets/art/ui/UI button pressed.png" id="3_7cmgq"]
 [ext_resource type="Script" uid="uid://bmao6ilhutvvi" path="res://ui/components/menu_button.gd" id="4_iqu5b"]
 [ext_resource type="Script" uid="uid://biajfv665ttlc" path="res://ui/components/hover_component.gd" id="5_3lon3"]
+[ext_resource type="FontFile" uid="uid://jimsitoijr6" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Italic.ttf" id="5_7cmgq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_d4lpo"]
+font = ExtResource("5_7cmgq")
 font_size = 50
 
 [node name="MenuButton" type="TextureButton"]
