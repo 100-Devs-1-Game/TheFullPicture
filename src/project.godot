@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 EventManager="*res://global/event_manager.gd"
 MouseCursorController="*res://global/mouse_cursor_controller.tscn"
 SceneLoader="*res://global/scene_loader.tscn"
+GameData="*res://global/game_data.tscn"
 
 [display]
 
