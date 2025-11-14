@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_8iwgo")
-clues_file = "res://data/clues/floor where the body was 1st stage.txt"
+clues_file = "res://data/clues/txt/floor where the body was 1st stage.txt"
 metadata/_custom_type_script = "uid://dmnq1txl08h0i"
