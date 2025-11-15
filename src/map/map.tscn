@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://j03f4fj76s3c"]
+[gd_scene load_steps=23 format=3 uid="uid://j03f4fj76s3c"]
 
 [ext_resource type="Script" uid="uid://bso3q0dg4imyy" path="res://map/map.gd" id="1_hgrid"]
 [ext_resource type="Script" uid="uid://d2wotlyy2ygk5" path="res://map/image_collection.gd" id="2_7lyie"]
@@ -12,8 +12,14 @@
 [ext_resource type="Script" uid="uid://k7nlgv50cog1" path="res://map/camera.gd" id="9_112ik"]
 [ext_resource type="Texture2D" uid="uid://mm8lug52xxwm" path="res://assets/art/map/stage2_02.png" id="9_lct0g"]
 [ext_resource type="Texture2D" uid="uid://dnlmxidwefra7" path="res://assets/art/map/stage2_05.png" id="10_k8tny"]
+[ext_resource type="Resource" uid="uid://cxyohc2camti1" path="res://data/map_objects/painting1.tres" id="15_8lto5"]
 [ext_resource type="PackedScene" uid="uid://ctyl2pf5eellh" path="res://map/interactable_object.tscn" id="15_58xwf"]
-[ext_resource type="Resource" uid="uid://dv607luiiy844" path="res://data/resources/objects/body.tres" id="16_w1ifk"]
+[ext_resource type="PackedScene" uid="uid://bb1i0iuq4cov3" path="res://ui/clues_ui.tscn" id="15_wnugf"]
+[ext_resource type="Resource" uid="uid://cpblra6bwn5a0" path="res://data/map_objects/painting2.tres" id="16_21p51"]
+[ext_resource type="Resource" uid="uid://dv607luiiy844" path="res://data/map_objects/body.tres" id="16_w1ifk"]
+[ext_resource type="Resource" uid="uid://ldug38xu7fgv" path="res://data/map_objects/liquor_bottles.tres" id="17_xar17"]
+[ext_resource type="Resource" uid="uid://bj1kkw5xk8bxt" path="res://data/map_objects/door.tres" id="18_iqbtl"]
+[ext_resource type="Resource" uid="uid://dy524mf1cg506" path="res://data/map_objects/closed_window.tres" id="19_81obp"]
 
 [sub_resource type="Resource" id="Resource_58xwf"]
 script = ExtResource("2_7lyie")
@@ -44,6 +50,46 @@ script = ExtResource("7_kxmgb")
 data = ExtResource("16_w1ifk")
 
 [node name="CollisionPolygon2D" parent="Interactable Objects/Body" index="0"]
-polygon = PackedVector2Array(1395, 1039, 1411, 966, 1473, 967, 1479, 1025, 1459, 1041)
+polygon = PackedVector2Array(1209, 1122, 1411, 966, 1473, 967, 1479, 1025, 1263, 1163)
+
+[node name="Painting" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+data = ExtResource("15_8lto5")
+
+[node name="CollisionPolygon2D" parent="Interactable Objects/Painting" index="0"]
+polygon = PackedVector2Array(1955, 1321, 2028, 1398, 2027, 1524, 1951, 1447)
+
+[node name="Painting 2" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+data = ExtResource("16_21p51")
+
+[node name="CollisionPolygon2D" parent="Interactable Objects/Painting 2" index="0"]
+polygon = PackedVector2Array(952, 1035, 1062, 962, 1066, 1102, 954, 1174)
+
+[node name="Liquor Bottles" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+data = ExtResource("17_xar17")
+
+[node name="CollisionPolygon2D" parent="Interactable Objects/Liquor Bottles" index="0"]
+polygon = PackedVector2Array(2819, 1305, 2855, 1281, 2910, 1334, 2916, 1411, 2876, 1414)
+
+[node name="Door" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+data = ExtResource("18_iqbtl")
+
+[node name="CollisionPolygon2D" parent="Interactable Objects/Door" index="0"]
+polygon = PackedVector2Array(2321, 866, 2401, 814, 2407, 1027, 2324, 1079)
+
+[node name="Closed Window" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+data = ExtResource("19_81obp")
+
+[node name="CollisionPolygon2D" parent="Interactable Objects/Closed Window" index="0"]
+polygon = PackedVector2Array(963, 585, 1036, 545, 1038, 721, 962, 772)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CluesUI" parent="CanvasLayer" instance=ExtResource("15_wnugf")]
+visible = false
 
 [editable path="Interactable Objects/Body"]
+[editable path="Interactable Objects/Painting"]
+[editable path="Interactable Objects/Painting 2"]
+[editable path="Interactable Objects/Liquor Bottles"]
+[editable path="Interactable Objects/Door"]
+[editable path="Interactable Objects/Closed Window"]
