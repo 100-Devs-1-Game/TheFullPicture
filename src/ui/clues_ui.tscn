@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bb1i0iuq4cov3"]
+[gd_scene load_steps=4 format=3 uid="uid://bb1i0iuq4cov3"]
 
 [ext_resource type="StyleBox" uid="uid://cp1ijl3m6dhr1" path="res://ui/paper_background.stylebox" id="1_3vhjd"]
+[ext_resource type="Script" uid="uid://p6o8myagmqi1" path="res://ui/clues_ui.gd" id="1_l33hs"]
+[ext_resource type="FontFile" uid="uid://bydy1is6a3qvc" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Regular.ttf" id="3_l78lp"]
 
 [node name="CluesUI" type="CenterContainer"]
 anchors_preset = 15
@@ -8,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_l33hs")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 custom_minimum_size = Vector2(400, 500)
@@ -18,7 +21,14 @@ theme_override_styles/panel = ExtResource("1_3vhjd")
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Text text text
+theme_override_fonts/normal_font = ExtResource("3_l78lp")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "Text text [url=body][color=green]text[/color][/url]
+"
 
-hallo"
+[connection signal="meta_clicked" from="PanelContainer/MarginContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]
+[connection signal="meta_hover_ended" from="PanelContainer/MarginContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_hover_ended"]
+[connection signal="meta_hover_started" from="PanelContainer/MarginContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_hover_started"]

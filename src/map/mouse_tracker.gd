@@ -23,13 +23,22 @@ func _physics_process(_delta: float) -> void:
 	point_query.position= get_global_mouse_position()
 	var result:= get_world_2d().direct_space_state.intersect_point(point_query)
 	hovering_over= result[0].collider if result else null
-	
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if not event.pressed:
+			return
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if hovering_over:
+				EventManager.open_clues_ui.emit(hovering_over.data)
+
 
 func enter_object():
-	prints("Enter object", hovering_over.name)
+	#prints("Enter object", hovering_over.name)
 	EventManager.mouse_hover.emit()
 
 
 func exit_object():
-	print("Exit object")
+	#print("Exit object")
 	EventManager.mouse_unhover.emit()
