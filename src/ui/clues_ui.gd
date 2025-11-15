@@ -1,5 +1,5 @@
 class_name CluesUI
-extends CenterContainer
+extends Control
 
 @onready var label: RichTextLabel = %RichTextLabel
 
@@ -21,7 +21,7 @@ func _input(event: InputEvent):
 		return
 		
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_RIGHT:
+		if event.pressed:
 			hide()
 			EventManager.clues_ui_closed.emit()
 
