@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="InteractableObjectData" load_steps=2 format=3 uid="uid://ldug38xu7fgv"]
 
-[ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_kxl1j"]
+[ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_sumtp"]
 
 [resource]
-script = ExtResource("1_kxl1j")
+script = ExtResource("1_sumtp")
 name = "liquor_bottles"
-clues_file = "res://data/clues/txt/liquor bottles 1st stage.txt"
+clues_file = "res://data/map_objects/txt/liquor bottles 1st stage.txt"
 metadata/_custom_type_script = "uid://dmnq1txl08h0i"

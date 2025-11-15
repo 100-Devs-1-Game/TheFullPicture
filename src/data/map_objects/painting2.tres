@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="InteractableObjectData" load_steps=2 format=3 uid="uid://cpblra6bwn5a0"]
 
-[ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_yi2a0"]
+[ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_e6hb3"]
 
 [resource]
-script = ExtResource("1_yi2a0")
+script = ExtResource("1_e6hb3")
 name = "painting2"
-clues_file = "res://data/clues/txt/painting2 1st stage.txt"
+clues_file = "res://data/map_objects/txt/painting2 1st stage.txt"
 metadata/_custom_type_script = "uid://dmnq1txl08h0i"

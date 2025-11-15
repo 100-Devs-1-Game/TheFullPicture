@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="InteractableObjectData" load_steps=2 format=3 uid="uid://dv607luiiy844"]
 
-[ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_8iwgo"]
+[ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_sqn80"]
 
 [resource]
-script = ExtResource("1_8iwgo")
-clues_file = "res://data/clues/txt/floor where the body was 1st stage.txt"
+script = ExtResource("1_sqn80")
+clues_file = "res://data/map_objects/txt/floor where the body was 1st stage.txt"
 metadata/_custom_type_script = "uid://dmnq1txl08h0i"

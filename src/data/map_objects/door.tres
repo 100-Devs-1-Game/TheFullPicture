@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="InteractableObjectData" load_steps=2 format=3 uid="uid://bj1kkw5xk8bxt"]
 
-[ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_ku015"]
+[ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_s3mjf"]
 
 [resource]
-script = ExtResource("1_ku015")
+script = ExtResource("1_s3mjf")
 name = "door"
-clues_file = "res://data/clues/txt/door 1st stage.txt"
+clues_file = "res://data/map_objects/txt/door 1st stage.txt"
 metadata/_custom_type_script = "uid://dmnq1txl08h0i"
