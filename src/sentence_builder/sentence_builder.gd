@@ -1,7 +1,6 @@
 class_name SentenceBuilder
 extends Control
 
-@export var stage: StageData
 @export var clue_button_scene: PackedScene
 
 @onready var clues: GridContainer = %Clues
@@ -26,7 +25,7 @@ func _ready() -> void:
 		child.queue_free()
 	
 	var grid_pos: Vector2i
-	for clue in stage.clues:
+	for clue in GameData.current_stage.clues:
 		@warning_ignore("integer_division")
 		while (grid_pos.x + grid_pos.y) % 2 > 0:
 			clues.add_child(Control.new())

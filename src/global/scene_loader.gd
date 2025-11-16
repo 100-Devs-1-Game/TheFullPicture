@@ -22,6 +22,16 @@ func _ready() -> void:
 
 
 func goto_map():
+	ensure_game_panel()
+	get_tree().change_scene_to_packed.call_deferred(map_scene)
+
+
+func goto_sentence_builder():
+	get_tree().change_scene_to_packed.call_deferred(GameData.current_stage.sentence_builder_scene)
+
+
+func ensure_game_panel():
+	if game_panel: return
 	game_panel= game_panel_scene.instantiate()
 	get_tree().root.add_child.call_deferred(game_panel)
-	get_tree().change_scene_to_packed.call_deferred(map_scene)
+	
