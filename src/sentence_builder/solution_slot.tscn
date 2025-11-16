@@ -5,11 +5,11 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_4fjdm"]
 font = ExtResource("1_vurw3")
-font_size = 48
+font_size = 60
 font_color = Color(0, 0, 0, 1)
 
 [node name="SolutionSlot" type="Label"]
-custom_minimum_size = Vector2(200, 70)
+custom_minimum_size = Vector2(300, 100)
 offset_right = 200.0
 offset_bottom = 50.0
 mouse_filter = 0
