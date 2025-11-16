@@ -19,6 +19,14 @@ func _ready() -> void:
 
 	if OS.is_debug_build() and skip_main_menu:
 		goto_map()
+	else:
+		goto_main_menu()
+
+
+func goto_main_menu():
+	if game_panel:
+		game_panel.queue_free()
+	get_tree().change_scene_to_packed.call_deferred(main_menu_scene)
 
 
 func goto_map():
