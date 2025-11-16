@@ -21,7 +21,7 @@ func _input(event: InputEvent):
 		return
 		
 	if event is InputEventMouseButton:
-		if event.pressed:
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			hide()
 			EventManager.clues_ui_closed.emit()
 
@@ -42,4 +42,7 @@ func _on_rich_text_label_meta_hover_ended(_meta: Variant) -> void:
 
 
 func _on_rich_text_label_meta_clicked(meta: Variant) -> void:
-	pass # Replace with function body.
+	prints("Clicked on clue", meta)
+	var clue: ClueData= GameData.clues[meta]
+	clue.discovered= true
+	update()

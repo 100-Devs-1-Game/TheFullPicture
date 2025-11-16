@@ -8,7 +8,7 @@
 bg_color = Color(0.16862746, 0.16862746, 0.16862746, 0.3647059)
 
 [node name="CluesUI" type="PanelContainer"]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_bottom = -200.0
@@ -21,18 +21,22 @@ script = ExtResource("1_l33hs")
 layout_mode = 2
 
 [node name="Page" type="PanelContainer" parent="CenterContainer"]
-custom_minimum_size = Vector2(600, 600)
+custom_minimum_size = Vector2(900, 700)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("1_3vhjd")
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Page"]
 layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 10
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/Page/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_l78lp")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "Text text [url=body][color=green]text[/color][/url]
 "
