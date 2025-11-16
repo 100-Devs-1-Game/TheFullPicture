@@ -15,7 +15,14 @@ func _ready() -> void:
 	Input.set_custom_mouse_cursor(icon_hover, Input.CURSOR_POINTING_HAND)
 
 
+func _process(_delta: float) -> void:
+	if Input.is_action_just_released("drag"):
+		on_mouse_reset()
+
+
 func on_mouse_hover():
+	if Input.is_action_pressed("drag"):
+		return
 	Input.set_custom_mouse_cursor(icon_hover)
 
 
@@ -24,4 +31,6 @@ func on_mouse_drag():
 
 
 func on_mouse_reset():
+	if Input.is_action_pressed("drag"):
+		return
 	Input.set_custom_mouse_cursor(icon_default)
