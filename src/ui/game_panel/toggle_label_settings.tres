@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cs244uqvx6x8d"]
+
+[ext_resource type="FontFile" uid="uid://bydy1is6a3qvc" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Regular.ttf" id="1_f3eiw"]
+
+[resource]
+font = ExtResource("1_f3eiw")
+font_size = 36
