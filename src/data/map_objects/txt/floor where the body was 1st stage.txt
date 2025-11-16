@@ -1,2 +1,2 @@
-Artist: Was there any blood here?
-Assistant: I didn’t see the dead body in person, but I heard the victim had blue lips and smelled rather peculiar. The medical staff was arguing about it.
+Artist: <clue>Was</clue> there any <clue>blood</clue> here?
+Assistant: I didn’t see the <clue>dead</clue> <clue>body</clue> in person, but I heard the <clue>victim</clue> had <clue>blue</clue> <clue>lips</clue> and smelled rather peculiar. The medical staff was arguing about it.
