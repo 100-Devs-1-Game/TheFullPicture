@@ -1,7 +1,7 @@
 extends Node
 
 @export var stages: Array[StageData]
-@export var clues: Dictionary[String, ClueData]
+var clues: Dictionary[String, ClueData]
 
 var current_stage: StageData
 

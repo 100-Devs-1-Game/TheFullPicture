@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5k3btu42elgp"]
+
+[ext_resource type="Script" uid="uid://d2ctuj4x2wm2" path="res://sentence_builder/solution_slot.gd" id="1_11ixn"]
+[ext_resource type="FontFile" uid="uid://ccoh5tco61px" path="res://assets_external/fonts/Jim_Nightshade/JimNightshade-Regular.ttf" id="1_vurw3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4fjdm"]
+font = ExtResource("1_vurw3")
+font_size = 48
+font_color = Color(0, 0, 0, 1)
+
+[node name="SolutionSlot" type="Label"]
+custom_minimum_size = Vector2(200, 70)
+offset_right = 200.0
+offset_bottom = 50.0
+mouse_filter = 0
+text = "Text"
+label_settings = SubResource("LabelSettings_4fjdm")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_11ixn")

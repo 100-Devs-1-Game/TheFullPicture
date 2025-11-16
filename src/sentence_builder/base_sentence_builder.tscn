@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbckjjt724yb2"]
+[gd_scene load_steps=5 format=3 uid="uid://cbckjjt724yb2"]
 
 [ext_resource type="Texture2D" uid="uid://d5kilvwruv80" path="res://assets/art/sentence_builder/UIScreen.png" id="1_0041t"]
 [ext_resource type="Script" uid="uid://1du2ec3qy8pt" path="res://sentence_builder/sentence_builder.gd" id="1_ipavy"]
+[ext_resource type="PackedScene" uid="uid://bocgygrpgxr2i" path="res://sentence_builder/clue_button.tscn" id="3_svl1a"]
+[ext_resource type="PackedScene" uid="uid://bcv0rlobvwr7t" path="res://ui/game_panel/game_panel.tscn" id="4_svl1a"]
 
 [node name="BaseSentenceBuilder" type="Control"]
 layout_mode = 3
@@ -11,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ipavy")
+clue_button_scene = ExtResource("3_svl1a")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -49,3 +52,54 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Header" type="Label" parent="."]
+custom_minimum_size = Vector2(350, 150)
+layout_mode = 0
+offset_left = 88.0
+offset_top = 91.0
+offset_right = 438.0
+offset_bottom = 241.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Clues" type="GridContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 500)
+layout_mode = 0
+offset_left = 28.0
+offset_top = 292.0
+offset_right = 540.0
+offset_bottom = 792.0
+theme_override_constants/h_separation = -100
+theme_override_constants/v_separation = -20
+columns = 2
+
+[node name="ClueButton" parent="Clues" instance=ExtResource("3_svl1a")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Clues"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Clues"]
+layout_mode = 2
+
+[node name="ClueButton2" parent="Clues" instance=ExtResource("3_svl1a")]
+layout_mode = 2
+
+[node name="ClueButton3" parent="Clues" instance=ExtResource("3_svl1a")]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="Clues"]
+layout_mode = 2
+
+[node name="Control4" type="Control" parent="Clues"]
+layout_mode = 2
+
+[node name="ClueButton4" parent="Clues" instance=ExtResource("3_svl1a")]
+layout_mode = 2
+
+[node name="ClueButton5" parent="Clues" instance=ExtResource("3_svl1a")]
+layout_mode = 2
+
+[node name="GamePanel" parent="." instance=ExtResource("4_svl1a")]

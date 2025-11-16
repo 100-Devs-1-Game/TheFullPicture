@@ -7,4 +7,4 @@ extends StaticBody2D
 
 func _ready() -> void:
 	assert(data, str(name, " doesn't have a clue"))
-	
+	data.preparse_description()

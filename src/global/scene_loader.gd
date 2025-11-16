@@ -1,5 +1,6 @@
 extends Node
 
+@export var disable_start: bool= false
 @export var skip_main_menu: bool= false
 
 @export var main_menu_scene: PackedScene
@@ -13,6 +14,9 @@ var game_panel: CanvasLayer
 
 
 func _ready() -> void:
+	if disable_start:
+		return
+
 	if OS.is_debug_build() and skip_main_menu:
 		goto_map()
 
