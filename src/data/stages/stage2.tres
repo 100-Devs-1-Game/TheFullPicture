@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StageData" load_steps=4 format=3 uid="uid://dqkupm0q5526b"]
+
+[ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_83drw"]
+[ext_resource type="Resource" uid="uid://dmbr1hjpidnao" path="res://data/clues/stage2/victim.tres" id="2_jy81f"]
+[ext_resource type="Script" uid="uid://36sgsjjy6v27" path="res://data/stage_data.gd" id="2_y62w6"]
+
+[resource]
+script = ExtResource("2_y62w6")
+clues = Array[ExtResource("1_83drw")]([ExtResource("2_jy81f")])
+metadata/_custom_type_script = "uid://36sgsjjy6v27"

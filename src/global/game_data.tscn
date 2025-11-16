@@ -1,9 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cefgxiuo12sks"]
+[gd_scene load_steps=5 format=3 uid="uid://cefgxiuo12sks"]
 
 [ext_resource type="Script" uid="uid://deik1jb70f4py" path="res://global/game_data.gd" id="1_0aco7"]
 [ext_resource type="Script" uid="uid://36sgsjjy6v27" path="res://data/stage_data.gd" id="2_2jdp6"]
 [ext_resource type="Resource" uid="uid://dc2yaw4w7y3yf" path="res://data/stages/stage1.tres" id="3_v0vht"]
+[ext_resource type="Resource" uid="uid://dqkupm0q5526b" path="res://data/stages/stage2.tres" id="4_v0vht"]
 
 [node name="GameData" type="Node"]
 script = ExtResource("1_0aco7")
-stages = Array[ExtResource("2_2jdp6")]([ExtResource("3_v0vht")])
+stages = Array[ExtResource("2_2jdp6")]([ExtResource("3_v0vht"), ExtResource("4_v0vht")])
