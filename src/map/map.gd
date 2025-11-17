@@ -14,7 +14,14 @@ extends Node2D
 
 
 func _ready() -> void:
-	init_canvas()
+	if Engine.is_editor_hint():
+		init_canvas(GameData.stages.size() - 1)
+	else:
+		init_canvas(GameData.get_current_stage_index())
+
+	var map_button: TextureButton= SceneLoader.game_panel.map_button
+	if not map_button.button_pressed:
+		map_button.button_pressed= true
 
 
 func init_canvas(stage_idx: int= 0):

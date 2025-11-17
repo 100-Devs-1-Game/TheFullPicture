@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@onready var map_button: TextureButton = %"Map Button"
+
 
 func _on_settings_button_pressed() -> void:
 	pass # Replace with function body.

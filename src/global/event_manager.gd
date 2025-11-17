@@ -12,3 +12,5 @@ signal mouse_release
 
 signal open_clues_ui(data: InteractableObjectData)
 signal clues_ui_closed
+
+signal entered_next_stage

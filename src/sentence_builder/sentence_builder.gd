@@ -51,12 +51,24 @@ func _process(_delta: float) -> void:
 			drag_texture.position= get_global_mouse_position()
 
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.keycode == KEY_F1:
+			if OS.is_debug_build():
+				solved()
+
+
 func advance_grid_pos(grid_pos: Vector2i)-> Vector2i:
 	grid_pos.x+= 1
 	if grid_pos.x > 1:
 		grid_pos.y+= 1
 		grid_pos.x= 0
 	return grid_pos
+
+
+func solved():
+	GameData.advance_stage()
+	SceneLoader.goto_map()
 
 
 func on_start_dragging(button: ClueButton):
