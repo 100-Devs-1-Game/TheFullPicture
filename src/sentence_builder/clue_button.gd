@@ -8,7 +8,7 @@ signal start_dragging(clue_button: ClueButton)
 
 
 func set_clue(clue: ClueData):
-	label.text= clue.word
+	label.text= clue.word.to_upper()
 
 
 func return_button():

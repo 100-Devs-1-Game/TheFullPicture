@@ -7,4 +7,4 @@ var clue_button: ClueButton
 
 func fill(button: ClueButton):
 	clue_button= button
-	text= clue_button.label.text
+	text= clue_button.label.text.to_upper()
