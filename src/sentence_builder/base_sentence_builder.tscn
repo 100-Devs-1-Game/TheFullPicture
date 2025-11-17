@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbckjjt724yb2"]
+[gd_scene load_steps=8 format=3 uid="uid://cbckjjt724yb2"]
 
 [ext_resource type="Texture2D" uid="uid://d5kilvwruv80" path="res://assets/art/sentence_builder/UIScreen.png" id="1_0041t"]
 [ext_resource type="Script" uid="uid://1du2ec3qy8pt" path="res://sentence_builder/sentence_builder.gd" id="1_ipavy"]
 [ext_resource type="PackedScene" uid="uid://bocgygrpgxr2i" path="res://sentence_builder/clue_button.tscn" id="3_svl1a"]
-[ext_resource type="PackedScene" uid="uid://bcv0rlobvwr7t" path="res://ui/game_panel/game_panel.tscn" id="4_svl1a"]
+[ext_resource type="FontFile" uid="uid://bydy1is6a3qvc" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Regular.ttf" id="4_jrtv6"]
+[ext_resource type="Texture2D" uid="uid://bomxf827itk1n" path="res://assets/art/sentence_builder/Ribbon 5.png" id="4_ttsbn"]
+[ext_resource type="PackedScene" uid="uid://c5k3btu42elgp" path="res://sentence_builder/solution_slot.tscn" id="5_ttsbn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ttsbn"]
+font = ExtResource("4_jrtv6")
+font_size = 40
 
 [node name="BaseSentenceBuilder" type="Control"]
 layout_mode = 3
@@ -17,21 +23,25 @@ clue_button_scene = ExtResource("3_svl1a")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_0041t")
 
 [node name="SolvedPainting" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 662.0
-offset_top = 99.0
-offset_right = 1827.0
-offset_bottom = 986.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1165.0
+offset_bottom = 887.0
+grow_horizontal = 0
+mouse_filter = 2
 
-[node name="Ribbon" type="TextureRect" parent="SolvedPainting"]
+[node name="Ribbon" type="TextureRect" parent="."]
 z_index = 1
 layout_mode = 1
 anchors_preset = -1
@@ -39,12 +49,14 @@ anchor_left = 0.02
 anchor_top = 0.5
 anchor_right = 0.02
 anchor_bottom = 0.5
-offset_top = -296.5
-offset_right = 284.0
-offset_bottom = 296.5
+offset_left = 873.6
+offset_top = -448.0
+offset_right = 1157.6
+offset_bottom = 252.0
 grow_vertical = 2
+texture = ExtResource("4_ttsbn")
 
-[node name="Solution" type="Control" parent="SolvedPainting/Ribbon"]
+[node name="Solution" type="Control" parent="Ribbon"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -53,15 +65,53 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Header" type="Label" parent="."]
-custom_minimum_size = Vector2(350, 150)
+[node name="SolvedPainting_Ribbon_Solution#SolutionSlot" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 91.0
-offset_right = 438.0
-offset_bottom = 241.0
+offset_left = -4.299988
+offset_top = 97.5
+offset_right = 295.7
+offset_bottom = 197.5
+
+[node name="SolvedPainting_Ribbon_Solution#SolutionSlot2" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
+layout_mode = 0
+offset_left = -4.3
+offset_top = 202.5
+offset_right = 295.7
+offset_bottom = 302.5
+
+[node name="SolvedPainting_Ribbon_Solution#SolutionSlot3" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
+layout_mode = 0
+offset_left = -4.3
+offset_top = 308.5
+offset_right = 295.7
+offset_bottom = 408.5
+
+[node name="SolvedPainting_Ribbon_Solution#SolutionSlot4" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
+layout_mode = 0
+offset_left = -4.3
+offset_top = 413.5
+offset_right = 295.7
+offset_bottom = 513.5
+
+[node name="SolvedPainting_Ribbon_Solution#SolutionSlot5" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
+layout_mode = 0
+offset_left = -4.3
+offset_top = 524.5
+offset_right = 295.7
+offset_bottom = 624.5
+
+[node name="Header" type="Label" parent="."]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 0
+offset_left = 78.0
+offset_top = 25.0
+offset_right = 678.0
+offset_bottom = 175.0
+text = "You couldn't have commited the crime, because.."
+label_settings = SubResource("LabelSettings_ttsbn")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Clues" type="GridContainer" parent="."]
 unique_name_in_owner = true
@@ -101,5 +151,3 @@ layout_mode = 2
 
 [node name="ClueButton5" parent="Clues" instance=ExtResource("3_svl1a")]
 layout_mode = 2
-
-[node name="GamePanel" parent="." instance=ExtResource("4_svl1a")]

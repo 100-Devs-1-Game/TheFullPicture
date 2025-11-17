@@ -1,45 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmhmwes5pgee5"]
+[gd_scene load_steps=2 format=3 uid="uid://dmhmwes5pgee5"]
 
 [ext_resource type="PackedScene" uid="uid://cbckjjt724yb2" path="res://sentence_builder/base_sentence_builder.tscn" id="1_iq7n4"]
-[ext_resource type="Texture2D" uid="uid://bomxf827itk1n" path="res://assets/art/sentence_builder/Ribbon 5.png" id="3_wmp7c"]
-[ext_resource type="PackedScene" uid="uid://c5k3btu42elgp" path="res://sentence_builder/solution_slot.tscn" id="4_wmirf"]
 
 [node name="SentenceBuilderStage1" instance=ExtResource("1_iq7n4")]
-
-[node name="Ribbon" parent="SolvedPainting" index="0"]
-texture = ExtResource("3_wmp7c")
-
-[node name="SolutionSlot" parent="SolvedPainting/Ribbon/Solution" index="0" instance=ExtResource("4_wmirf")]
-layout_mode = 0
-offset_left = -4.299988
-offset_top = 97.5
-offset_right = 295.7
-offset_bottom = 197.5
-
-[node name="SolutionSlot2" parent="SolvedPainting/Ribbon/Solution" index="1" instance=ExtResource("4_wmirf")]
-layout_mode = 0
-offset_left = -4.3
-offset_top = 202.5
-offset_right = 295.7
-offset_bottom = 302.5
-
-[node name="SolutionSlot3" parent="SolvedPainting/Ribbon/Solution" index="2" instance=ExtResource("4_wmirf")]
-layout_mode = 0
-offset_left = -4.3
-offset_top = 308.5
-offset_right = 295.7
-offset_bottom = 408.5
-
-[node name="SolutionSlot4" parent="SolvedPainting/Ribbon/Solution" index="3" instance=ExtResource("4_wmirf")]
-layout_mode = 0
-offset_left = -4.3
-offset_top = 413.5
-offset_right = 295.7
-offset_bottom = 513.5
-
-[node name="SolutionSlot5" parent="SolvedPainting/Ribbon/Solution" index="4" instance=ExtResource("4_wmirf")]
-layout_mode = 0
-offset_left = -4.3
-offset_top = 524.5
-offset_right = 295.7
-offset_bottom = 624.5
