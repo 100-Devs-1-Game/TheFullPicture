@@ -19,8 +19,6 @@ func _ready() -> void:
 
 	if OS.is_debug_build() and skip_main_menu:
 		goto_map()
-	else:
-		goto_main_menu()
 
 
 func goto_main_menu():
