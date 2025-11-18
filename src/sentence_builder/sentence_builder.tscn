@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cbckjjt724yb2"]
+[gd_scene load_steps=21 format=3 uid="uid://cbckjjt724yb2"]
 
 [ext_resource type="Texture2D" uid="uid://d5kilvwruv80" path="res://assets/art/sentence_builder/UIScreen.png" id="1_0041t"]
 [ext_resource type="Script" uid="uid://1du2ec3qy8pt" path="res://sentence_builder/sentence_builder.gd" id="1_ipavy"]
@@ -6,10 +6,14 @@
 [ext_resource type="FontFile" uid="uid://bydy1is6a3qvc" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Regular.ttf" id="4_jrtv6"]
 [ext_resource type="Texture2D" uid="uid://bomxf827itk1n" path="res://assets/art/sentence_builder/Ribbon 5.png" id="4_ttsbn"]
 [ext_resource type="PackedScene" uid="uid://c5k3btu42elgp" path="res://sentence_builder/solution_slot.tscn" id="5_ttsbn"]
+[ext_resource type="StyleBox" uid="uid://cp1ijl3m6dhr1" path="res://ui/paper_background.stylebox" id="7_ahu4t"]
+[ext_resource type="FontFile" uid="uid://ccoh5tco61px" path="res://assets_external/fonts/Jim_Nightshade/JimNightshade-Regular.ttf" id="8_4d1ai"]
+[ext_resource type="PackedScene" uid="uid://bdm23kuuc3m74" path="res://ui/components/menu_button.tscn" id="9_c33to"]
+[ext_resource type="FontFile" uid="uid://jimsitoijr6" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Italic.ttf" id="10_q7o4a"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0sqpq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sqpq"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_elr6o"]
 resource_local_to_scene = true
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 3
@@ -19,7 +23,7 @@ border_width_bottom = 3
 border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
 border_blend = true
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5l2sj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cg4df"]
 resource_local_to_scene = true
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 3
@@ -29,7 +33,7 @@ border_width_bottom = 3
 border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
 border_blend = true
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb6ek"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srpaq"]
 resource_local_to_scene = true
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 3
@@ -39,7 +43,7 @@ border_width_bottom = 3
 border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
 border_blend = true
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24ga6"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wy40q"]
 resource_local_to_scene = true
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 3
@@ -49,7 +53,7 @@ border_width_bottom = 3
 border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
 border_blend = true
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahu4t"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h10nr"]
 resource_local_to_scene = true
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 3
@@ -62,6 +66,19 @@ border_blend = true
 [sub_resource type="LabelSettings" id="LabelSettings_ttsbn"]
 font = ExtResource("4_jrtv6")
 font_size = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahu4t"]
+bg_color = Color(0, 0, 0, 0.5254902)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vq4cl"]
+font = ExtResource("8_4d1ai")
+font_size = 40
+font_color = Color(0.18120003, 0.18120006, 0.18120003, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_y6ynu"]
+font = ExtResource("10_q7o4a")
+font_size = 50
+font_color = Color(0.18120003, 0.18120006, 0.18120003, 1)
 
 [node name="SentenceBuilder" type="Control"]
 layout_mode = 3
@@ -124,7 +141,7 @@ offset_top = 97.5
 offset_right = 295.7
 offset_bottom = 197.5
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_0sqpq")
+frame_stylebox = SubResource("StyleBoxFlat_elr6o")
 
 [node name="SolutionSlot2" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
@@ -133,7 +150,7 @@ offset_top = 202.5
 offset_right = 295.7
 offset_bottom = 302.5
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_5l2sj")
+frame_stylebox = SubResource("StyleBoxFlat_cg4df")
 
 [node name="SolutionSlot3" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
@@ -142,7 +159,7 @@ offset_top = 308.5
 offset_right = 295.7
 offset_bottom = 408.5
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_bb6ek")
+frame_stylebox = SubResource("StyleBoxFlat_srpaq")
 
 [node name="SolutionSlot4" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
@@ -151,7 +168,7 @@ offset_top = 415.0
 offset_right = 296.0
 offset_bottom = 515.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_24ga6")
+frame_stylebox = SubResource("StyleBoxFlat_wy40q")
 
 [node name="SolutionSlot5" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
@@ -160,7 +177,7 @@ offset_top = 521.0
 offset_right = 296.0
 offset_bottom = 621.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_ahu4t")
+frame_stylebox = SubResource("StyleBoxFlat_h10nr")
 
 [node name="Header" type="Label" parent="."]
 custom_minimum_size = Vector2(600, 100)
@@ -213,3 +230,48 @@ layout_mode = 2
 
 [node name="ClueButton5" parent="Clues" instance=ExtResource("3_svl1a")]
 layout_mode = 2
+
+[node name="Popup Panel" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ahu4t")
+
+[node name="Panel Container" type="PanelContainer" parent="Popup Panel"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 0
+offset_left = 1312.0
+offset_top = 251.0
+offset_right = 1712.0
+offset_bottom = 651.0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("7_ahu4t")
+
+[node name="Popup Label" type="Label" parent="Popup Panel/Panel Container"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "...Maybe you're still drunk"
+label_settings = SubResource("LabelSettings_vq4cl")
+autowrap_mode = 3
+
+[node name="Try Again Button" parent="Popup Panel/Panel Container" instance=ExtResource("9_c33to")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Label" parent="Popup Panel/Panel Container/Try Again Button" index="0"]
+text = "Try Again"
+label_settings = SubResource("LabelSettings_y6ynu")
+
+[connection signal="pressed" from="Popup Panel/Panel Container/Try Again Button" to="." method="_on_try_again_button_pressed"]
+
+[editable path="Popup Panel/Panel Container/Try Again Button"]

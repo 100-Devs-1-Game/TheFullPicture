@@ -6,6 +6,7 @@ extends Control
 @onready var clues: GridContainer = %Clues
 @onready var solution: Control = %Solution
 @onready var solved_painting: TextureRect = $SolvedPainting
+@onready var popup_panel: Panel = %"Popup Panel"
 
 var solution_items: Array[Label]
 var dragging_button: ClueButton
@@ -87,6 +88,8 @@ func verify_solution():
 
 	if correct:
 		solved()
+	else:
+		popup_panel.show()
 
 
 func solved():
@@ -115,3 +118,7 @@ func on_start_dragging(button: ClueButton):
 
 func on_hover_slot(slot: SolutionSlot):
 	hover_slot= slot
+
+
+func _on_try_again_button_pressed() -> void:
+	get_tree().reload_current_scene()
