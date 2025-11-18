@@ -20,6 +20,7 @@ font_size = 50
 
 [node name="GamePanel" type="CanvasLayer"]
 script = ExtResource("1_yn0q5")
+checkbox_scene = ExtResource("5_1fep8")
 
 [node name="Panel" type="PanelContainer" parent="."]
 custom_minimum_size = Vector2(0, 200)
@@ -54,7 +55,7 @@ layout_mode = 2
 text = "Words"
 label_settings = SubResource("LabelSettings_ng428")
 
-[node name="GridContainer" type="GridContainer" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer"]
+[node name="Checkbox GridContainer" type="GridContainer" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
@@ -62,25 +63,25 @@ size_flags_vertical = 4
 theme_override_constants/v_separation = -5
 columns = 5
 
-[node name="CheckBox" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="CheckBox2" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox2" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="CheckBox3" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox3" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="CheckBox4" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox4" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="CheckBox5" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox5" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="CheckBox6" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox6" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="CheckBox7" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox7" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
 [node name="Settings Button" parent="Panel/MarginContainer" instance=ExtResource("2_lxin7")]
