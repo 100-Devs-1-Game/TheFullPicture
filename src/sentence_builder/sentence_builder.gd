@@ -20,6 +20,7 @@ func _ready() -> void:
 	for slot: SolutionSlot in solution.get_children():
 		slot.mouse_entered.connect(on_hover_slot.bind(slot))
 		slot.mouse_exited.connect(func(): hover_slot= null)
+		slot.remove_clue.connect(func(button: ClueButton): button.return_button())
 		slot.text= ""
 		solution_items.append(slot)
 

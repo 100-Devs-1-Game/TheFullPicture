@@ -1,6 +1,8 @@
 class_name SolutionSlot
 extends Label
 
+signal remove_clue(button: ClueButton)
+
 @export var frame_stylebox: StyleBoxFlat
 
 var clue_button: ClueButton
@@ -18,3 +20,12 @@ func _on_mouse_entered() -> void:
 
 func _on_mouse_exited() -> void:
 	add_theme_stylebox_override("normal", StyleBoxEmpty.new())
+
+
+func _on_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.pressed:
+			if clue_button:
+				remove_clue.emit(clue_button)
+				clue_button= null
+				text= ""
