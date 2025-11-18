@@ -9,6 +9,7 @@ extends Control
 var solution_items: Array[Label]
 var dragging_button: ClueButton
 var drag_texture: TextureRect
+var dragging_offset: Vector2
 var hover_slot: SolutionSlot
 
 
@@ -48,7 +49,7 @@ func _process(_delta: float) -> void:
 			drag_texture.queue_free()
 			dragging_button= null
 		else:
-			drag_texture.position= get_global_mouse_position()
+			drag_texture.position= get_global_mouse_position() + dragging_offset
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -74,12 +75,19 @@ func solved():
 func on_start_dragging(button: ClueButton):
 	dragging_button= button
 	drag_texture= button.duplicate(0)
+
+	var button_label: Label= drag_texture.get_child(0)
+	# Remove HoverComponent
+	button_label.get_child(0).queue_free()
+	button_label.mouse_filter= Control.MOUSE_FILTER_IGNORE
+	
 	drag_texture.z_index= 100
 	drag_texture.mouse_filter= Control.MOUSE_FILTER_IGNORE
+	drag_texture.focus_mode= Control.FOCUS_NONE
+	dragging_offset= button.global_position - get_global_mouse_position()
 	get_tree().root.add_child(drag_texture)
 	EventManager.mouse_drag.emit()
 
 
 func on_hover_slot(slot: SolutionSlot):
 	hover_slot= slot
-	
