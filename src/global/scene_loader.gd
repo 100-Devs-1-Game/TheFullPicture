@@ -5,6 +5,7 @@ extends Node
 
 @export var main_menu_scene: PackedScene
 @export var map_scene: PackedScene
+@export var sentence_builder_scene: PackedScene
 
 @export var game_panel_scene: PackedScene
 
@@ -33,7 +34,7 @@ func goto_map():
 
 
 func goto_sentence_builder():
-	get_tree().change_scene_to_packed.call_deferred(GameData.current_stage.sentence_builder_scene)
+	get_tree().change_scene_to_packed.call_deferred(sentence_builder_scene)
 
 
 func ensure_game_panel():

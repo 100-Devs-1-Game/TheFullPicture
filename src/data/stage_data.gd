@@ -2,9 +2,10 @@ class_name StageData
 extends Resource
 
 @export var clues: Array[ClueData]
-@export var sentence_builder_scene: PackedScene
+@export var solved_painting: Texture2D
 
 var completed:= false
+
 
 
 func init():

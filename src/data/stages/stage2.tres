@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="StageData" load_steps=9 format=3 uid="uid://dqkupm0q5526b"]
+[gd_resource type="Resource" script_class="StageData" load_steps=10 format=3 uid="uid://dqkupm0q5526b"]
 
 [ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_83drw"]
 [ext_resource type="Resource" uid="uid://dx1l2xf1ym7tw" path="res://data/clues/stage2/artistic.tres" id="2_qt0bw"]
@@ -8,8 +8,10 @@
 [ext_resource type="Resource" uid="uid://b1ihdd666timy" path="res://data/clues/stage2/law.tres" id="5_2yo73"]
 [ext_resource type="Resource" uid="uid://cw2taextkodqb" path="res://data/clues/stage2/money.tres" id="6_pb30l"]
 [ext_resource type="Resource" uid="uid://b20j0qqw0xbai" path="res://data/clues/stage2/property.tres" id="7_jacvd"]
+[ext_resource type="Texture2D" uid="uid://bb0baf0g0jybt" path="res://assets/art/sentence_builder/SolvedPainting2.png" id="9_lyoij"]
 
 [resource]
 script = ExtResource("2_y62w6")
 clues = Array[ExtResource("1_83drw")]([ExtResource("2_qt0bw"), ExtResource("3_lyoij"), ExtResource("4_sy4ij"), ExtResource("5_2yo73"), ExtResource("6_pb30l"), ExtResource("7_jacvd")])
+solved_painting = ExtResource("9_lyoij")
 metadata/_custom_type_script = "uid://36sgsjjy6v27"

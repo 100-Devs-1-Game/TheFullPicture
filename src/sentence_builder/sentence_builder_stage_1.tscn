@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmhmwes5pgee5"]
-
-[ext_resource type="PackedScene" uid="uid://cbckjjt724yb2" path="res://sentence_builder/base_sentence_builder.tscn" id="1_iq7n4"]
-
-[node name="SentenceBuilderStage1" instance=ExtResource("1_iq7n4")]

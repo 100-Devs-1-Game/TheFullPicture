@@ -11,10 +11,10 @@
 [ext_resource type="Resource" uid="uid://biohci58gbcls" path="res://data/clues/stage1/lips.tres" id="8_4rclw"]
 [ext_resource type="Resource" uid="uid://dmbr1hjpidnao" path="res://data/clues/stage1/victim.tres" id="9_kcxmc"]
 [ext_resource type="Resource" uid="uid://v3el3r1d00v1" path="res://data/clues/stage1/was.tres" id="9_ufgxt"]
-[ext_resource type="PackedScene" uid="uid://dmhmwes5pgee5" path="res://sentence_builder/sentence_builder_stage_1.tscn" id="11_455ic"]
+[ext_resource type="Texture2D" uid="uid://dx8pqmdv4gs4o" path="res://assets/art/sentence_builder/SolvedPainting1.png" id="12_kcxmc"]
 
 [resource]
 script = ExtResource("2_ejx7n")
 clues = Array[ExtResource("1_qy5xu")]([ExtResource("2_lw6or"), ExtResource("3_455ic"), ExtResource("4_kcxmc"), ExtResource("5_oah3i"), ExtResource("6_ntlvh"), ExtResource("7_4kayx"), ExtResource("8_4rclw"), ExtResource("9_kcxmc"), ExtResource("9_ufgxt")])
-sentence_builder_scene = ExtResource("11_455ic")
+solved_painting = ExtResource("12_kcxmc")
 metadata/_custom_type_script = "uid://36sgsjjy6v27"
