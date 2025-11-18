@@ -15,6 +15,9 @@ var _zoom_level: int = 1  # 0 = fit, 1 = 1×, 2 = 2×
 
 
 func _ready() -> void:
+	EventManager.open_clues_ui.connect(func(data): set_process(false))
+	EventManager.clues_ui_closed.connect(func(): set_process(true))
+
 	_map = _find_map_node(get_tree().root)
 	if not _map:
 		push_error("Camera could not find a node with 'map_size' in the scene!")
@@ -69,8 +72,9 @@ func _process(delta: float) -> void:
 		_move_camera(edge_dir * edge_pan_speed * delta)
 
 
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if not _map: return
+	if not is_processing(): return
 
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
