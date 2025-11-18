@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InteractableObjectData" load_steps=2 format=3 uid="uid://c1g5fm077nueo"]
+
+[ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_j8ppe"]
+
+[resource]
+script = ExtResource("1_j8ppe")
+name = "Drag Marks"
+clues_file = "res://data/map_objects/txt/drag marks 2nd stage.txt"
+metadata/_custom_type_script = "uid://dmnq1txl08h0i"

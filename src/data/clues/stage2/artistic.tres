@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ClueData" load_steps=2 format=3 uid="uid://dx1l2xf1ym7tw"]
+
+[ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_utdp8"]
+
+[resource]
+script = ExtResource("1_utdp8")
+word = "artistic"
+metadata/_custom_type_script = "uid://ct3rmdycaa212"

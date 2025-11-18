@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InteractableObjectData" load_steps=2 format=3 uid="uid://cn53o3pn2m07x"]
+
+[ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_h2lhw"]
+
+[resource]
+script = ExtResource("1_h2lhw")
+name = "Empty Wall"
+clues_file = "res://data/map_objects/txt/empty spot on the wall 2nd stage.txt"
+metadata/_custom_type_script = "uid://dmnq1txl08h0i"

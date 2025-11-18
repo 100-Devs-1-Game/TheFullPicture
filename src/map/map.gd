@@ -10,14 +10,21 @@ extends Node2D
 @export_tool_button("Init Canvas") var init_canvas_action = init_canvas
 
 @onready var canvas: Node2D = $Canvas
+@onready var interactable_objects: Node2D = $"Interactable Objects"
 
 
 
 func _ready() -> void:
+	var stage_idx: int= GameData.get_current_stage_index()
+	
 	if Engine.is_editor_hint():
 		init_canvas(GameData.stages.size() - 1)
 	else:
-		init_canvas(GameData.get_current_stage_index())
+		init_canvas(stage_idx)
+
+	for obj: InteractableObject in interactable_objects.get_children():
+		if obj.unlock_stage > stage_idx:
+			obj.collision_layer= 0
 
 	var map_button: TextureButton= SceneLoader.game_panel.map_button
 	if not map_button.button_pressed:

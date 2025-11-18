@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ClueData" load_steps=2 format=3 uid="uid://cw2taextkodqb"]
+
+[ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_x6y75"]
+
+[resource]
+script = ExtResource("1_x6y75")
+word = "money"
+metadata/_custom_type_script = "uid://ct3rmdycaa212"

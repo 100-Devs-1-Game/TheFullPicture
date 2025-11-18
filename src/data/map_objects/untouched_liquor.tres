@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InteractableObjectData" load_steps=2 format=3 uid="uid://bqxeeu6u7gs0r"]
+
+[ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_j468m"]
+
+[resource]
+script = ExtResource("1_j468m")
+name = "Untouched Liqour"
+clues_file = "res://data/map_objects/txt/untouched liquor bottles 2nd stage.txt"
+metadata/_custom_type_script = "uid://dmnq1txl08h0i"

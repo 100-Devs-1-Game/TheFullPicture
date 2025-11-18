@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ClueData" load_steps=2 format=3 uid="uid://c1agr721njq8y"]
+
+[ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_jtmmk"]
+
+[resource]
+script = ExtResource("1_jtmmk")
+word = "dragged"
+metadata/_custom_type_script = "uid://ct3rmdycaa212"

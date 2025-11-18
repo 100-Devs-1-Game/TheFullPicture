@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="StageData" load_steps=12 format=3 uid="uid://dc2yaw4w7y3yf"]
+[gd_resource type="Resource" script_class="StageData" load_steps=13 format=3 uid="uid://dc2yaw4w7y3yf"]
 
 [ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_qy5xu"]
 [ext_resource type="Script" uid="uid://36sgsjjy6v27" path="res://data/stage_data.gd" id="2_ejx7n"]
@@ -9,11 +9,12 @@
 [ext_resource type="Resource" uid="uid://ba6v3rq7ty6ls" path="res://data/clues/stage1/dead.tres" id="6_ntlvh"]
 [ext_resource type="Resource" uid="uid://qgtlxhbpc3hq" path="res://data/clues/stage1/drunk.tres" id="7_4kayx"]
 [ext_resource type="Resource" uid="uid://biohci58gbcls" path="res://data/clues/stage1/lips.tres" id="8_4rclw"]
+[ext_resource type="Resource" uid="uid://dmbr1hjpidnao" path="res://data/clues/stage1/victim.tres" id="9_kcxmc"]
 [ext_resource type="Resource" uid="uid://v3el3r1d00v1" path="res://data/clues/stage1/was.tres" id="9_ufgxt"]
 [ext_resource type="PackedScene" uid="uid://dmhmwes5pgee5" path="res://sentence_builder/sentence_builder_stage_1.tscn" id="11_455ic"]
 
 [resource]
 script = ExtResource("2_ejx7n")
-clues = Array[ExtResource("1_qy5xu")]([ExtResource("2_lw6or"), ExtResource("3_455ic"), ExtResource("4_kcxmc"), ExtResource("5_oah3i"), ExtResource("6_ntlvh"), ExtResource("7_4kayx"), ExtResource("8_4rclw"), ExtResource("9_ufgxt")])
+clues = Array[ExtResource("1_qy5xu")]([ExtResource("2_lw6or"), ExtResource("3_455ic"), ExtResource("4_kcxmc"), ExtResource("5_oah3i"), ExtResource("6_ntlvh"), ExtResource("7_4kayx"), ExtResource("8_4rclw"), ExtResource("9_kcxmc"), ExtResource("9_ufgxt")])
 sentence_builder_scene = ExtResource("11_455ic")
 metadata/_custom_type_script = "uid://36sgsjjy6v27"
