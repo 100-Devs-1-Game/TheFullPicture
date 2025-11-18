@@ -5,9 +5,12 @@ signal start_dragging(clue_button: ClueButton)
 
 @onready var label: Label = %Label
 
+var data: ClueData
+
 
 
 func set_clue(clue: ClueData):
+	data= clue
 	label.text= clue.word.to_upper()
 
 

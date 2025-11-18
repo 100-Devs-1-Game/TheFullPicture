@@ -3,6 +3,7 @@ extends Resource
 
 @export var clues: Array[ClueData]
 @export var solved_painting: Texture2D
+@export var solution: SolutionData 
 
 var completed:= false
 

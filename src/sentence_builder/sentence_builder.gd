@@ -5,12 +5,14 @@ extends Control
 
 @onready var clues: GridContainer = %Clues
 @onready var solution: Control = %Solution
+@onready var solved_painting: TextureRect = $SolvedPainting
 
 var solution_items: Array[Label]
 var dragging_button: ClueButton
 var drag_texture: TextureRect
 var dragging_offset: Vector2
 var hover_slot: SolutionSlot
+var filled_counter:= 0
 
 
 
@@ -44,6 +46,9 @@ func _process(_delta: float) -> void:
 		if Input.is_action_just_released("drag"):
 			if hover_slot:
 				hover_slot.fill(dragging_button)
+				filled_counter+= 1
+				if filled_counter == GameData.current_stage.solution.clues.size():
+					verify_solution()
 			else:
 				dragging_button.return_button()
 			drag_texture.queue_free()
@@ -67,9 +72,27 @@ func advance_grid_pos(grid_pos: Vector2i)-> Vector2i:
 	return grid_pos
 
 
+func verify_solution():
+	var i= 0
+	var correct:= true
+	for slot: SolutionSlot in solution.get_children():
+		if not slot.clue_button:
+			continue
+		if GameData.current_stage.solution.clues[i] !=\
+			slot.clue_button.data:
+				correct= false
+				break
+		i+= 1
+
+	if correct:
+		solved()
+
+
 func solved():
+	solved_painting.texture= GameData.current_stage.solved_painting
 	GameData.advance_stage()
-	SceneLoader.goto_map()
+	
+	#SceneLoader.goto_map()
 
 
 func on_start_dragging(button: ClueButton):

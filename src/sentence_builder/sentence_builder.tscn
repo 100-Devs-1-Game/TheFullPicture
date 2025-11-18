@@ -9,6 +9,16 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0sqpq"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sqpq"]
+resource_local_to_scene = true
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
+border_blend = true
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5l2sj"]
 resource_local_to_scene = true
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -40,16 +50,6 @@ border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
 border_blend = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahu4t"]
-resource_local_to_scene = true
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
-border_blend = true
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4d1ai"]
 resource_local_to_scene = true
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 3
@@ -117,50 +117,50 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SolvedPainting_Ribbon_Solution#SolutionSlot" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
+[node name="SolutionSlot" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
 offset_left = -4.299988
 offset_top = 97.5
 offset_right = 295.7
 offset_bottom = 197.5
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_5l2sj")
+frame_stylebox = SubResource("StyleBoxFlat_0sqpq")
 
-[node name="SolvedPainting_Ribbon_Solution#SolutionSlot2" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
+[node name="SolutionSlot2" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
 offset_left = -4.3
 offset_top = 202.5
 offset_right = 295.7
 offset_bottom = 302.5
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_bb6ek")
+frame_stylebox = SubResource("StyleBoxFlat_5l2sj")
 
-[node name="SolvedPainting_Ribbon_Solution#SolutionSlot3" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
+[node name="SolutionSlot3" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
 offset_left = -4.3
 offset_top = 308.5
 offset_right = 295.7
 offset_bottom = 408.5
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_24ga6")
+frame_stylebox = SubResource("StyleBoxFlat_bb6ek")
 
-[node name="SolvedPainting_Ribbon_Solution#SolutionSlot4" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
+[node name="SolutionSlot4" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
 offset_left = -4.0000124
 offset_top = 415.0
 offset_right = 296.0
 offset_bottom = 515.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_ahu4t")
+frame_stylebox = SubResource("StyleBoxFlat_24ga6")
 
-[node name="SolvedPainting_Ribbon_Solution#SolutionSlot5" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
+[node name="SolutionSlot5" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
 offset_left = -4.0000124
 offset_top = 521.0
 offset_right = 296.0
 offset_bottom = 621.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_4d1ai")
+frame_stylebox = SubResource("StyleBoxFlat_ahu4t")
 
 [node name="Header" type="Label" parent="."]
 custom_minimum_size = Vector2(600, 100)
