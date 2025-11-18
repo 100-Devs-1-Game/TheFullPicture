@@ -22,8 +22,7 @@ func _input(event: InputEvent):
 		
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-			hide()
-			EventManager.clues_ui_closed.emit()
+			close()
 
 
 func on_open(p_data: InteractableObjectData):
@@ -31,6 +30,11 @@ func on_open(p_data: InteractableObjectData):
 	data= p_data
 	update()
 	show()
+
+
+func close():
+	hide()
+	EventManager.clues_ui_closed.emit()
 
 
 func _on_rich_text_label_meta_hover_started(_meta: Variant) -> void:
@@ -46,3 +50,9 @@ func _on_rich_text_label_meta_clicked(meta: Variant) -> void:
 	var clue: ClueData= GameData.clues[meta]
 	clue.discovered= true
 	update()
+
+
+func _on_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.pressed:
+			close()

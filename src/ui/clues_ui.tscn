@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://bydy1is6a3qvc" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Regular.ttf" id="3_l78lp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l78lp"]
-bg_color = Color(0.16862746, 0.16862746, 0.16862746, 0.3647059)
+bg_color = Color(0.16862746, 0.16862746, 0.16862746, 0.6)
 
 [node name="CluesUI" type="PanelContainer"]
 anchors_preset = 15
@@ -41,6 +41,7 @@ bbcode_enabled = true
 text = "Text text [url=body][color=green]text[/color][/url]
 "
 
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="meta_clicked" from="CenterContainer/Page/MarginContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]
 [connection signal="meta_hover_ended" from="CenterContainer/Page/MarginContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_hover_ended"]
 [connection signal="meta_hover_started" from="CenterContainer/Page/MarginContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_hover_started"]
