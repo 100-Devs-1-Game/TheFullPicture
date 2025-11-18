@@ -1,1 +1,3 @@
-The room is filled with an unpleasant, sweetish smell. You try to open the window. It’s jammed.
+The room is filled with an unpleasant, sweetish smell.
+
+You try to open the window. It’s jammed.

@@ -1,1 +1,1 @@
-Assistant: You were <clue>drunk</clue> <clue>already</clue>, weren’t you? You truly have no shame.
+Assistant: You were <clue>drunk</clue> <clue>already</clue>, weren’t you? You truly have no shame!
