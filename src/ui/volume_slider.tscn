@@ -9,6 +9,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ouuc"]
 
 [node name="HSlider" type="HSlider"]
+z_index = 1
 custom_minimum_size = Vector2(750, 0)
 offset_right = 750.0
 offset_bottom = 44.0

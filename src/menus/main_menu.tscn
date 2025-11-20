@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dctujakcy61p2"]
+[gd_scene load_steps=4 format=3 uid="uid://dctujakcy61p2"]
 
 [ext_resource type="PackedScene" uid="uid://bdm23kuuc3m74" path="res://ui/components/menu_button.tscn" id="1_8gy84"]
 [ext_resource type="Script" uid="uid://bvdfmvl4aql2i" path="res://menus/main_menu.gd" id="1_ij7vn"]
+[ext_resource type="PackedScene" uid="uid://bgvhmukqvy84h" path="res://menus/settings_popup.tscn" id="3_yjgyn"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -20,12 +21,36 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MenuButton" parent="CenterContainer" instance=ExtResource("1_8gy84")]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="StartButton" parent="CenterContainer/VBoxContainer" instance=ExtResource("1_8gy84")]
 layout_mode = 2
 
-[node name="Label" parent="CenterContainer/MenuButton" index="0"]
+[node name="Label" parent="CenterContainer/VBoxContainer/StartButton" index="0"]
 text = "Start"
 
-[connection signal="pressed" from="CenterContainer/MenuButton" to="." method="_on_menu_button_pressed"]
+[node name="SettingsButton" parent="CenterContainer/VBoxContainer" instance=ExtResource("1_8gy84")]
+layout_mode = 2
 
-[editable path="CenterContainer/MenuButton"]
+[node name="Label" parent="CenterContainer/VBoxContainer/SettingsButton" index="0"]
+text = "Settings"
+
+[node name="QuitButton" parent="CenterContainer/VBoxContainer" instance=ExtResource("1_8gy84")]
+layout_mode = 2
+
+[node name="Label" parent="CenterContainer/VBoxContainer/QuitButton" index="0"]
+text = "Quit"
+
+[node name="SettingsPopup" parent="." instance=ExtResource("3_yjgyn")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+
+[editable path="CenterContainer/VBoxContainer/StartButton"]
+[editable path="CenterContainer/VBoxContainer/SettingsButton"]
+[editable path="CenterContainer/VBoxContainer/QuitButton"]

@@ -8,7 +8,6 @@
 
 [node name="SceneLoader" type="Node"]
 script = ExtResource("1_aagan")
-skip_main_menu = true
 main_menu_scene = ExtResource("2_bkc7g")
 map_scene = ExtResource("3_sjw1y")
 sentence_builder_scene = ExtResource("4_sjw1y")
