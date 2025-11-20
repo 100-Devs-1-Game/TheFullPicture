@@ -42,6 +42,8 @@ func _ready() -> void:
 		button.start_dragging.connect(on_start_dragging)
 		grid_pos= advance_grid_pos(grid_pos)
 
+	MusicPlayer.play_sentence()
+
 
 func _process(_delta: float) -> void:
 	if dragging_button:

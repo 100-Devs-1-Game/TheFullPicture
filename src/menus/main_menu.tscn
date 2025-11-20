@@ -1,8 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://dctujakcy61p2"]
+[gd_scene load_steps=8 format=3 uid="uid://dctujakcy61p2"]
 
 [ext_resource type="PackedScene" uid="uid://bdm23kuuc3m74" path="res://ui/components/menu_button.tscn" id="1_8gy84"]
 [ext_resource type="Script" uid="uid://bvdfmvl4aql2i" path="res://menus/main_menu.gd" id="1_ij7vn"]
+[ext_resource type="FontFile" uid="uid://jimsitoijr6" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Italic.ttf" id="3_rqbgu"]
 [ext_resource type="PackedScene" uid="uid://bgvhmukqvy84h" path="res://menus/settings_popup.tscn" id="3_yjgyn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oblsv"]
+resource_local_to_scene = true
+font = ExtResource("3_rqbgu")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_a63lr"]
+resource_local_to_scene = true
+font = ExtResource("3_rqbgu")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_pwbes"]
+resource_local_to_scene = true
+font = ExtResource("3_rqbgu")
+font_size = 50
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -30,18 +46,21 @@ layout_mode = 2
 
 [node name="Label" parent="CenterContainer/VBoxContainer/StartButton" index="0"]
 text = "Start"
+label_settings = SubResource("LabelSettings_oblsv")
 
 [node name="SettingsButton" parent="CenterContainer/VBoxContainer" instance=ExtResource("1_8gy84")]
 layout_mode = 2
 
 [node name="Label" parent="CenterContainer/VBoxContainer/SettingsButton" index="0"]
 text = "Settings"
+label_settings = SubResource("LabelSettings_a63lr")
 
 [node name="QuitButton" parent="CenterContainer/VBoxContainer" instance=ExtResource("1_8gy84")]
 layout_mode = 2
 
 [node name="Label" parent="CenterContainer/VBoxContainer/QuitButton" index="0"]
 text = "Quit"
+label_settings = SubResource("LabelSettings_pwbes")
 
 [node name="SettingsPopup" parent="." instance=ExtResource("3_yjgyn")]
 visible = false

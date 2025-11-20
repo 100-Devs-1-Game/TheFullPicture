@@ -6,6 +6,7 @@ extends Control
 
 func _ready() -> void:
 	settings_popup.hide()
+	MusicPlayer.play_menu()
 
 
 func _on_start_button_pressed() -> void:

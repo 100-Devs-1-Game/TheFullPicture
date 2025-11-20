@@ -31,7 +31,8 @@ func goto_main_menu():
 func goto_map():
 	ensure_game_panel()
 	get_tree().change_scene_to_packed.call_deferred(map_scene)
-
+	MusicPlayer.play_game()
+	
 
 func goto_sentence_builder():
 	get_tree().change_scene_to_packed.call_deferred(sentence_builder_scene)

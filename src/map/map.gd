@@ -30,6 +30,8 @@ func _ready() -> void:
 	if not map_button.button_pressed:
 		map_button.button_pressed= true
 
+	MusicPlayer.play_game()
+
 
 func init_canvas(stage_idx: int= 0):
 	var stage: ImageCollection= stages[stage_idx]
