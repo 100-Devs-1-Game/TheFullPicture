@@ -22,10 +22,6 @@ func update_check_boxes():
 		checkbox_grid.add_child(child)
 
 
-func _on_settings_button_pressed() -> void:
-	pass # Replace with function body.
-
-
 func _on_sentence_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		SceneLoader.goto_sentence_builder()
@@ -34,3 +30,7 @@ func _on_sentence_button_toggled(toggled_on: bool) -> void:
 func _on_map_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		SceneLoader.goto_map()
+
+
+func _on_menu_button_pressed() -> void:
+	SceneLoader.goto_main_menu()

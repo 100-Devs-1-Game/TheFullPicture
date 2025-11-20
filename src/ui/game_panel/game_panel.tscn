@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bcv0rlobvwr7t"]
+[gd_scene load_steps=16 format=3 uid="uid://bcv0rlobvwr7t"]
 
 [ext_resource type="Script" uid="uid://ql1qy0kjohly" path="res://ui/game_panel/game_panel.gd" id="1_yn0q5"]
 [ext_resource type="ButtonGroup" uid="uid://bjwginnhmnc78" path="res://ui/game_panel/panel_button_group.tres" id="2_hlndb"]
@@ -15,6 +15,11 @@
 [ext_resource type="LabelSettings" uid="uid://cs244uqvx6x8d" path="res://ui/game_panel/toggle_label_settings.tres" id="10_wgcdy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ng428"]
+font = ExtResource("4_ifxwd")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_1fep8"]
+resource_local_to_scene = true
 font = ExtResource("4_ifxwd")
 font_size = 50
 
@@ -84,13 +89,14 @@ layout_mode = 2
 [node name="CheckBox7" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="Settings Button" parent="Panel/MarginContainer" instance=ExtResource("2_lxin7")]
+[node name="Menu Button" parent="Panel/MarginContainer" instance=ExtResource("2_lxin7")]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 
-[node name="Label" parent="Panel/MarginContainer/Settings Button" index="0"]
-text = "Settings"
+[node name="Label" parent="Panel/MarginContainer/Menu Button" index="0"]
+text = "Menu"
+label_settings = SubResource("LabelSettings_1fep8")
 
 [node name="Toggle Buttons" type="HBoxContainer" parent="Panel"]
 layout_mode = 2
@@ -162,8 +168,8 @@ vertical_alignment = 1
 script = ExtResource("5_lxin7")
 metadata/_custom_type_script = "uid://biajfv665ttlc"
 
-[connection signal="pressed" from="Panel/MarginContainer/Settings Button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/Menu Button" to="." method="_on_menu_button_pressed"]
 [connection signal="toggled" from="Panel/Toggle Buttons/Sentence Button" to="." method="_on_sentence_button_toggled"]
 [connection signal="toggled" from="Panel/Toggle Buttons/Map Button" to="." method="_on_map_button_toggled"]
 
-[editable path="Panel/MarginContainer/Settings Button"]
+[editable path="Panel/MarginContainer/Menu Button"]
