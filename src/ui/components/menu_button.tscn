@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://jimsitoijr6" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Italic.ttf" id="5_7cmgq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_d4lpo"]
+resource_local_to_scene = true
 font = ExtResource("5_7cmgq")
 font_size = 50
 
