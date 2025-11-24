@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dctujakcy61p2"]
+[gd_scene load_steps=9 format=3 uid="uid://dctujakcy61p2"]
 
 [ext_resource type="PackedScene" uid="uid://bdm23kuuc3m74" path="res://ui/components/menu_button.tscn" id="1_8gy84"]
 [ext_resource type="Script" uid="uid://bvdfmvl4aql2i" path="res://menus/main_menu.gd" id="1_ij7vn"]
+[ext_resource type="Texture2D" uid="uid://bgv5cbttm1rko" path="res://assets/art/main_menu/Start.jpg" id="2_oblsv"]
 [ext_resource type="FontFile" uid="uid://jimsitoijr6" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Italic.ttf" id="3_rqbgu"]
 [ext_resource type="PackedScene" uid="uid://bgvhmukqvy84h" path="res://menus/settings_popup.tscn" id="3_yjgyn"]
 
@@ -29,36 +30,38 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ij7vn")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_oblsv")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-layout_mode = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 564.0
+offset_right = 1110.0
+offset_bottom = 964.0
 theme_override_constants/separation = 50
 
-[node name="StartButton" parent="CenterContainer/VBoxContainer" instance=ExtResource("1_8gy84")]
+[node name="StartButton" parent="VBoxContainer" instance=ExtResource("1_8gy84")]
 layout_mode = 2
 
-[node name="Label" parent="CenterContainer/VBoxContainer/StartButton" index="0"]
+[node name="Label" parent="VBoxContainer/StartButton" index="0"]
 text = "Start"
 label_settings = SubResource("LabelSettings_oblsv")
 
-[node name="SettingsButton" parent="CenterContainer/VBoxContainer" instance=ExtResource("1_8gy84")]
+[node name="SettingsButton" parent="VBoxContainer" instance=ExtResource("1_8gy84")]
 layout_mode = 2
 
-[node name="Label" parent="CenterContainer/VBoxContainer/SettingsButton" index="0"]
+[node name="Label" parent="VBoxContainer/SettingsButton" index="0"]
 text = "Settings"
 label_settings = SubResource("LabelSettings_a63lr")
 
-[node name="QuitButton" parent="CenterContainer/VBoxContainer" instance=ExtResource("1_8gy84")]
+[node name="QuitButton" parent="VBoxContainer" instance=ExtResource("1_8gy84")]
 layout_mode = 2
 
-[node name="Label" parent="CenterContainer/VBoxContainer/QuitButton" index="0"]
+[node name="Label" parent="VBoxContainer/QuitButton" index="0"]
 text = "Quit"
 label_settings = SubResource("LabelSettings_pwbes")
 
@@ -66,10 +69,10 @@ label_settings = SubResource("LabelSettings_pwbes")
 visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 
-[editable path="CenterContainer/VBoxContainer/StartButton"]
-[editable path="CenterContainer/VBoxContainer/SettingsButton"]
-[editable path="CenterContainer/VBoxContainer/QuitButton"]
+[editable path="VBoxContainer/StartButton"]
+[editable path="VBoxContainer/SettingsButton"]
+[editable path="VBoxContainer/QuitButton"]
