@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bdm23kuuc3m74"]
+[gd_scene load_steps=10 format=3 uid="uid://bdm23kuuc3m74"]
 
 [ext_resource type="Texture2D" uid="uid://cx6nwy0ar1df6" path="res://assets/art/ui/UI button.png" id="1_6182c"]
 [ext_resource type="Texture2D" uid="uid://dsn5ghw6d2av5" path="res://assets/art/ui/UI hover.png" id="2_3lon3"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://bmao6ilhutvvi" path="res://ui/components/menu_button.gd" id="4_iqu5b"]
 [ext_resource type="Script" uid="uid://biajfv665ttlc" path="res://ui/components/hover_component.gd" id="5_3lon3"]
 [ext_resource type="FontFile" uid="uid://jimsitoijr6" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Italic.ttf" id="5_7cmgq"]
+[ext_resource type="PackedScene" uid="uid://bxy7ewfa6ryj" path="res://ui/components/click_sound_component.tscn" id="7_d4lpo"]
+[ext_resource type="AudioStream" uid="uid://bqryf6efffpk4" path="res://assets/sfx/F0220TFP-ui_menus_j.ogg" id="8_gnjgr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_d4lpo"]
 resource_local_to_scene = true
@@ -38,6 +40,9 @@ vertical_alignment = 1
 
 [node name="HoverComponent" type="Node" parent="."]
 script = ExtResource("5_3lon3")
+
+[node name="ClickSoundComponent" parent="." instance=ExtResource("7_d4lpo")]
+click_sound = ExtResource("8_gnjgr")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

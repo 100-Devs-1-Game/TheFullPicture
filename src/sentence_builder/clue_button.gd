@@ -4,6 +4,7 @@ extends TextureRect
 signal start_dragging(clue_button: ClueButton)
 
 @onready var label: Label = %Label
+@onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 
 var data: ClueData
 
@@ -23,3 +24,4 @@ func _on_label_gui_input(event: InputEvent) -> void:
 		if event.pressed:
 			start_dragging.emit(self)
 			modulate= Color.TRANSPARENT
+			audio_player.play()

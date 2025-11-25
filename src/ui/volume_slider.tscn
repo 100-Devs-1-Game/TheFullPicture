@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://qkrpor4fycdq"]
+[gd_scene load_steps=9 format=3 uid="uid://qkrpor4fycdq"]
 
 [ext_resource type="Texture2D" uid="uid://b7c6f77qvl6ap" path="res://assets/art/sentence_builder/slider_neutral.png" id="1_3qf2g"]
 [ext_resource type="Texture2D" uid="uid://dr5rdysqht4tq" path="res://assets/art/sentence_builder/slider_hold.png" id="2_2ouuc"]
 [ext_resource type="Texture2D" uid="uid://bs4qj0snikoy" path="res://assets/art/ui/Slider.png" id="3_2ouuc"]
+[ext_resource type="PackedScene" uid="uid://bxy7ewfa6ryj" path="res://ui/components/click_sound_component.tscn" id="4_dt855"]
+[ext_resource type="AudioStream" uid="uid://bqryf6efffpk4" path="res://assets/sfx/F0220TFP-ui_menus_j.ogg" id="5_60dkn"]
+[ext_resource type="AudioStream" uid="uid://dvbjesehm0yq" path="res://assets/sfx/F0220TFP-ui_menus_b.ogg" id="5_wq4ht"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dt855"]
 
@@ -28,3 +31,7 @@ offset_top = -6.0
 offset_right = 729.0
 offset_bottom = 34.0
 texture = ExtResource("3_2ouuc")
+
+[node name="ClickSoundComponent" parent="." instance=ExtResource("4_dt855")]
+click_sound = ExtResource("5_60dkn")
+release_sound = ExtResource("5_wq4ht")

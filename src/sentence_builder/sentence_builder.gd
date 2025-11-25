@@ -8,6 +8,12 @@ extends Control
 @onready var solved_painting: TextureRect = $SolvedPainting
 @onready var popup_panel: Panel = %"Popup Panel"
 
+@onready var audio_player_fill_slot: AudioStreamPlayer = $"AudioStreamPlayer Fill Slot"
+@onready var audio_player_return_clue: AudioStreamPlayer = $"AudioStreamPlayer Return Clue"
+@onready var audio_player_correct: AudioStreamPlayer = $"AudioStreamPlayer Correct"
+@onready var audio_player_incorrect: AudioStreamPlayer = $"AudioStreamPlayer Incorrect"
+
+
 var solution_items: Array[Label]
 var dragging_button: ClueButton
 var drag_texture: TextureRect
@@ -53,7 +59,10 @@ func _process(_delta: float) -> void:
 				filled_counter+= 1
 				if filled_counter == GameData.current_stage.solution.clues.size():
 					verify_solution()
+				else:
+					audio_player_fill_slot.play()
 			else:
+				audio_player_return_clue.play()
 				dragging_button.return_button()
 			drag_texture.queue_free()
 			dragging_button= null
@@ -89,8 +98,10 @@ func verify_solution():
 		i+= 1
 
 	if correct:
+		audio_player_correct.play()
 		solved()
 	else:
+		audio_player_incorrect.play()
 		popup_panel.show()
 
 

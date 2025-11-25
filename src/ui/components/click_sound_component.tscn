@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxy7ewfa6ryj"]
+
+[ext_resource type="Script" uid="uid://b8i0o4m2ur4mk" path="res://ui/components/click_sound_component.gd" id="1_7wka8"]
+
+[node name="ClickSoundComponent" type="Node"]
+script = ExtResource("1_7wka8")
+
+[node name="ClickSoundPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Sfx"
+
+[node name="ReleaseSoundPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Sfx"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bcv0rlobvwr7t"]
+[gd_scene load_steps=19 format=3 uid="uid://bcv0rlobvwr7t"]
 
 [ext_resource type="Script" uid="uid://ql1qy0kjohly" path="res://ui/game_panel/game_panel.gd" id="1_yn0q5"]
 [ext_resource type="ButtonGroup" uid="uid://bjwginnhmnc78" path="res://ui/game_panel/panel_button_group.tres" id="2_hlndb"]
@@ -13,6 +13,9 @@
 [ext_resource type="Script" uid="uid://biajfv665ttlc" path="res://ui/components/hover_component.gd" id="5_lxin7"]
 [ext_resource type="Texture2D" uid="uid://rafjpx4rpgrd" path="res://assets/art/sentence_builder/button-blank_red.png" id="6_nuau5"]
 [ext_resource type="LabelSettings" uid="uid://cs244uqvx6x8d" path="res://ui/game_panel/toggle_label_settings.tres" id="10_wgcdy"]
+[ext_resource type="PackedScene" uid="uid://bxy7ewfa6ryj" path="res://ui/components/click_sound_component.tscn" id="12_nfuip"]
+[ext_resource type="AudioStream" uid="uid://bf6xwnwss4j3r" path="res://assets/sfx/F0220TFP-ui_menus_h.ogg" id="13_h7pcf"]
+[ext_resource type="AudioStream" uid="uid://brvel4nvbjp1b" path="res://assets/sfx/F0220TFP-ui_menus_g.ogg" id="16_nfuip"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ng428"]
 font = ExtResource("4_ifxwd")
@@ -135,6 +138,9 @@ vertical_alignment = 1
 script = ExtResource("5_lxin7")
 metadata/_custom_type_script = "uid://biajfv665ttlc"
 
+[node name="ClickSoundComponent" parent="Panel/Toggle Buttons/Sentence Button" instance=ExtResource("12_nfuip")]
+click_sound = ExtResource("16_nfuip")
+
 [node name="Map Button" type="TextureButton" parent="Panel/Toggle Buttons"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -167,6 +173,9 @@ vertical_alignment = 1
 [node name="HoverComponent" type="Node" parent="Panel/Toggle Buttons/Map Button"]
 script = ExtResource("5_lxin7")
 metadata/_custom_type_script = "uid://biajfv665ttlc"
+
+[node name="ClickSoundComponent" parent="Panel/Toggle Buttons/Map Button" instance=ExtResource("12_nfuip")]
+click_sound = ExtResource("13_h7pcf")
 
 [connection signal="pressed" from="Panel/MarginContainer/Menu Button" to="." method="_on_menu_button_pressed"]
 [connection signal="toggled" from="Panel/Toggle Buttons/Sentence Button" to="." method="_on_sentence_button_toggled"]

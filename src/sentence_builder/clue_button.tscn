@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bocgygrpgxr2i"]
+[gd_scene load_steps=7 format=3 uid="uid://bocgygrpgxr2i"]
 
 [ext_resource type="Texture2D" uid="uid://bdqtk4an3o77d" path="res://assets/art/sentence_builder/clue-text.png" id="1_43oy1"]
 [ext_resource type="Script" uid="uid://77sc4nvig56a" path="res://sentence_builder/clue_button.gd" id="2_fp6s1"]
 [ext_resource type="FontFile" uid="uid://bydy1is6a3qvc" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Regular.ttf" id="2_orep8"]
 [ext_resource type="Script" uid="uid://biajfv665ttlc" path="res://ui/components/hover_component.gd" id="3_orep8"]
+[ext_resource type="AudioStream" uid="uid://certfr5nthwp7" path="res://assets/sfx/F0220TFP-ui_menus_f.ogg" id="6_w1x2x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fp6s1"]
 font = ExtResource("2_orep8")
@@ -40,5 +41,9 @@ vertical_alignment = 1
 [node name="HoverComponent" type="Node" parent="Label"]
 script = ExtResource("3_orep8")
 metadata/_custom_type_script = "uid://biajfv665ttlc"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_w1x2x")
+bus = &"Sfx"
 
 [connection signal="gui_input" from="Label" to="." method="_on_label_gui_input"]

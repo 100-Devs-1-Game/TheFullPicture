@@ -2,6 +2,8 @@ class_name CluesUI
 extends Control
 
 @onready var label: RichTextLabel = %RichTextLabel
+@onready var audio_player_open: AudioStreamPlayer = $"AudioStreamPlayer Open"
+@onready var audio_player_clue: AudioStreamPlayer = $"AudioStreamPlayer Clue"
 
 var data: InteractableObjectData
 
@@ -28,6 +30,7 @@ func _input(event: InputEvent):
 func on_open(p_data: InteractableObjectData):
 	assert(not visible)
 	data= p_data
+	audio_player_open.play()
 	update()
 	show()
 
@@ -49,6 +52,7 @@ func _on_rich_text_label_meta_clicked(meta: Variant) -> void:
 	prints("Clicked on clue", meta)
 	var clue: ClueData= GameData.clues[meta]
 	clue.discovered= true
+	audio_player_clue.play()
 	update()
 
 
