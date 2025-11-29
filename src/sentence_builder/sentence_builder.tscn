@@ -17,47 +17,47 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0sqpq"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_elr6o"]
+resource_local_to_scene = true
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cg4df"]
+resource_local_to_scene = true
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srpaq"]
+resource_local_to_scene = true
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wy40q"]
+resource_local_to_scene = true
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
+border_blend = true
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h10nr"]
-resource_local_to_scene = true
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
-border_blend = true
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vq4cl"]
-resource_local_to_scene = true
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
-border_blend = true
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6ynu"]
-resource_local_to_scene = true
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
-border_blend = true
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pw1op"]
-resource_local_to_scene = true
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
-border_blend = true
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7lcaj"]
 resource_local_to_scene = true
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 3
@@ -145,7 +145,7 @@ offset_top = 97.5
 offset_right = 295.7
 offset_bottom = 197.5
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_h10nr")
+frame_stylebox = SubResource("StyleBoxFlat_elr6o")
 
 [node name="SolutionSlot2" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
@@ -154,7 +154,7 @@ offset_top = 202.5
 offset_right = 295.7
 offset_bottom = 302.5
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_vq4cl")
+frame_stylebox = SubResource("StyleBoxFlat_cg4df")
 
 [node name="SolutionSlot3" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
@@ -163,7 +163,7 @@ offset_top = 308.5
 offset_right = 295.7
 offset_bottom = 408.5
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_y6ynu")
+frame_stylebox = SubResource("StyleBoxFlat_srpaq")
 
 [node name="SolutionSlot4" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
@@ -172,7 +172,7 @@ offset_top = 415.0
 offset_right = 296.0
 offset_bottom = 515.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_pw1op")
+frame_stylebox = SubResource("StyleBoxFlat_wy40q")
 
 [node name="SolutionSlot5" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
@@ -181,7 +181,7 @@ offset_top = 521.0
 offset_right = 296.0
 offset_bottom = 621.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
-frame_stylebox = SubResource("StyleBoxFlat_7lcaj")
+frame_stylebox = SubResource("StyleBoxFlat_h10nr")
 
 [node name="Header" type="Label" parent="."]
 custom_minimum_size = Vector2(600, 100)
