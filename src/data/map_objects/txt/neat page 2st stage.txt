@@ -1,4 +1,4 @@
-The paper is smooth beneath your calloused fingertips. It’s an excerpt from a recently passed <clue>law</clue>, you think. The official language makes your already throbbing head spin.
+The paper is smooth beneath your calloused fingertips. It’s an excerpt <clue>from</clue> a recently passed <clue>law</clue>, you think. The official language makes your already throbbing head spin.
 
 Artist: I found something.
 
