@@ -1,6 +1,8 @@
 class_name SettingsPopup
 extends CenterContainer
 
+signal closed
+
 @onready var music_slider: HSlider = %MusicSlider
 @onready var sfx_slider: HSlider = %SFXSlider
 @onready var fullscreen_check_box: CheckBox = %FullscreenCheckBox
@@ -24,3 +26,4 @@ func _on_save_button_pressed() -> void:
 
 func _on_cancel_button_pressed() -> void:
 	hide()
+	closed.emit()

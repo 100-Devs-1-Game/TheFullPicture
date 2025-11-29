@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://ytsibd2sd08a"]
+
+[ext_resource type="Script" uid="uid://c4thsiqxsjjps" path="res://menus/tutorial_popup.gd" id="1_mxy3a"]
+[ext_resource type="StyleBox" uid="uid://opg1fo6x4a5l" path="res://ui/panel_background.stylebox" id="1_roied"]
+[ext_resource type="Texture2D" uid="uid://b6w5d5rxac4n4" path="res://assets/art/main_menu/How_to_play.png" id="2_mxy3a"]
+[ext_resource type="PackedScene" uid="uid://bdm23kuuc3m74" path="res://ui/components/menu_button.tscn" id="3_4kg5x"]
+[ext_resource type="FontFile" uid="uid://jimsitoijr6" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Italic.ttf" id="4_hqpeq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hjgkh"]
+resource_local_to_scene = true
+font = ExtResource("4_hqpeq")
+font_size = 50
+
+[node name="TutorialPopup" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mxy3a")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_roied")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_top = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_mxy3a")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="CloseButton" parent="PanelContainer/MarginContainer/MarginContainer" instance=ExtResource("3_4kg5x")]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="Label" parent="PanelContainer/MarginContainer/MarginContainer/CloseButton" index="0"]
+text = "Close"
+label_settings = SubResource("LabelSettings_hjgkh")
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/MarginContainer/CloseButton" to="." method="_on_close_button_pressed"]
+
+[editable path="PanelContainer/MarginContainer/MarginContainer/CloseButton"]

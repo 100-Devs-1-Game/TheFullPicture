@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dctujakcy61p2"]
+[gd_scene load_steps=11 format=3 uid="uid://dctujakcy61p2"]
 
 [ext_resource type="PackedScene" uid="uid://bdm23kuuc3m74" path="res://ui/components/menu_button.tscn" id="1_8gy84"]
 [ext_resource type="Script" uid="uid://bvdfmvl4aql2i" path="res://menus/main_menu.gd" id="1_ij7vn"]
 [ext_resource type="Texture2D" uid="uid://bgv5cbttm1rko" path="res://assets/art/main_menu/Start.jpg" id="2_oblsv"]
 [ext_resource type="FontFile" uid="uid://jimsitoijr6" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Italic.ttf" id="3_rqbgu"]
 [ext_resource type="PackedScene" uid="uid://bgvhmukqvy84h" path="res://menus/settings_popup.tscn" id="3_yjgyn"]
+[ext_resource type="PackedScene" uid="uid://ytsibd2sd08a" path="res://menus/tutorial_popup.tscn" id="6_a63lr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oblsv"]
 resource_local_to_scene = true
@@ -12,6 +13,11 @@ font = ExtResource("3_rqbgu")
 font_size = 50
 
 [sub_resource type="LabelSettings" id="LabelSettings_a63lr"]
+resource_local_to_scene = true
+font = ExtResource("3_rqbgu")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_hswy5"]
 resource_local_to_scene = true
 font = ExtResource("3_rqbgu")
 font_size = 50
@@ -39,10 +45,10 @@ texture = ExtResource("2_oblsv")
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 810.0
-offset_top = 564.0
+offset_top = 515.0
 offset_right = 1110.0
-offset_bottom = 964.0
-theme_override_constants/separation = 50
+offset_bottom = 1035.0
+theme_override_constants/separation = 40
 
 [node name="StartButton" parent="VBoxContainer" instance=ExtResource("1_8gy84")]
 layout_mode = 2
@@ -58,6 +64,13 @@ layout_mode = 2
 text = "Settings"
 label_settings = SubResource("LabelSettings_a63lr")
 
+[node name="TutorialButton" parent="VBoxContainer" instance=ExtResource("1_8gy84")]
+layout_mode = 2
+
+[node name="Label" parent="VBoxContainer/TutorialButton" index="0"]
+text = "Tutorial"
+label_settings = SubResource("LabelSettings_hswy5")
+
 [node name="QuitButton" parent="VBoxContainer" instance=ExtResource("1_8gy84")]
 layout_mode = 2
 
@@ -65,14 +78,29 @@ layout_mode = 2
 text = "Quit"
 label_settings = SubResource("LabelSettings_pwbes")
 
+[node name="BlockingOverlay" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="SettingsPopup" parent="." instance=ExtResource("3_yjgyn")]
+visible = false
+layout_mode = 1
+
+[node name="TutorialPopup" parent="." instance=ExtResource("6_a63lr")]
 visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/TutorialButton" to="." method="_on_tutorial_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 
 [editable path="VBoxContainer/StartButton"]
 [editable path="VBoxContainer/SettingsButton"]
+[editable path="VBoxContainer/TutorialButton"]
 [editable path="VBoxContainer/QuitButton"]
