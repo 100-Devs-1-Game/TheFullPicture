@@ -1,3 +1,1 @@
-The flowers you planted years ago didn't bloom this year.
-
-Upon closer inspection, you notice shallow marks in the ground. It seems something heavy was <clue>dragged</clue> through <clue>here</clue>.
+The flowers you planted near <clue>the storage</clue> years ago didn't bloom this year. Upon closer inspection, you notice shallow marks in the ground. It seems something heavy was <clue>dragged</clue through <clue>here</clue>.
