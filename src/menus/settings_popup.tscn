@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bgvhmukqvy84h"]
+[gd_scene load_steps=11 format=3 uid="uid://bgvhmukqvy84h"]
 
 [ext_resource type="Script" uid="uid://di3vjtnqcb842" path="res://menus/settings_popup.gd" id="1_pevn8"]
 [ext_resource type="StyleBox" uid="uid://opg1fo6x4a5l" path="res://ui/panel_background.stylebox" id="2_htr5q"]
@@ -6,8 +6,6 @@
 [ext_resource type="FontFile" uid="uid://ccoh5tco61px" path="res://assets_external/fonts/Jim_Nightshade/JimNightshade-Regular.ttf" id="4_qf4ac"]
 [ext_resource type="PackedScene" uid="uid://c2dutbrg4w40c" path="res://ui/components/check_box.tscn" id="5_jfdso"]
 [ext_resource type="PackedScene" uid="uid://bdm23kuuc3m74" path="res://ui/components/menu_button.tscn" id="6_hk8so"]
-[ext_resource type="PackedScene" uid="uid://bxy7ewfa6ryj" path="res://ui/components/click_sound_component.tscn" id="6_qf4ac"]
-[ext_resource type="AudioStream" uid="uid://bqryf6efffpk4" path="res://assets/sfx/F0220TFP-ui_menus_j.ogg" id="7_jfdso"]
 [ext_resource type="FontFile" uid="uid://jimsitoijr6" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Italic.ttf" id="9_hk8so"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vmd75"]
@@ -88,9 +86,6 @@ label_settings = SubResource("LabelSettings_vmd75")
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 10
-
-[node name="ClickSoundComponent" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/FullscreenCheckBox" instance=ExtResource("6_qf4ac")]
-click_sound = ExtResource("7_jfdso")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
