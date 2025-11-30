@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ClueData" load_steps=2 format=3 uid="uid://biyf8kxqsts2b"]
+
+[ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_bn2hn"]
+
+[resource]
+script = ExtResource("1_bn2hn")
+word = "the corpse"
+metadata/_custom_type_script = "uid://ct3rmdycaa212"

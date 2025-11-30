@@ -1,17 +1,26 @@
-[gd_resource type="Resource" script_class="StageData" load_steps=10 format=3 uid="uid://dqkupm0q5526b"]
+[gd_resource type="Resource" script_class="StageData" load_steps=19 format=3 uid="uid://dqkupm0q5526b"]
 
 [ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_83drw"]
 [ext_resource type="Resource" uid="uid://dx1l2xf1ym7tw" path="res://data/clues/stage2/artistic.tres" id="2_qt0bw"]
 [ext_resource type="Script" uid="uid://36sgsjjy6v27" path="res://data/stage_data.gd" id="2_y62w6"]
 [ext_resource type="Resource" uid="uid://c1agr721njq8y" path="res://data/clues/stage2/dragged.tres" id="3_lyoij"]
+[ext_resource type="Resource" uid="uid://barmfgcq3rnp5" path="res://data/clues/stage2/director.tres" id="3_q5wr2"]
 [ext_resource type="Resource" uid="uid://diciuv24e4w6q" path="res://data/clues/stage2/here.tres" id="4_sy4ij"]
 [ext_resource type="Resource" uid="uid://b1ihdd666timy" path="res://data/clues/stage2/law.tres" id="5_2yo73"]
+[ext_resource type="Resource" uid="uid://dn33qb7rea8q1" path="res://data/clues/stage2/from.tres" id="5_w6fbe"]
 [ext_resource type="Resource" uid="uid://cw2taextkodqb" path="res://data/clues/stage2/money.tres" id="6_pb30l"]
 [ext_resource type="Resource" uid="uid://b20j0qqw0xbai" path="res://data/clues/stage2/property.tres" id="7_jacvd"]
+[ext_resource type="Resource" uid="uid://cty0f68tad88n" path="res://data/clues/stage2/need.tres" id="9_e8qb7"]
 [ext_resource type="Texture2D" uid="uid://bb0baf0g0jybt" path="res://assets/art/sentence_builder/SolvedPainting2.png" id="9_lyoij"]
+[ext_resource type="Resource" uid="uid://b8ufw2ptde6lg" path="res://data/clues/stage2/police_chief.tres" id="10_myblk"]
+[ext_resource type="Resource" uid="uid://c5wwgd8qpa84p" path="res://data/clues/stage2/tears.tres" id="12_le8oq"]
+[ext_resource type="Resource" uid="uid://biyf8kxqsts2b" path="res://data/clues/stage2/the_corpse.tres" id="13_6kmoj"]
+[ext_resource type="Resource" uid="uid://cbsffik4ase6r" path="res://data/clues/stage2/the_storage.tres" id="14_ntp3x"]
+[ext_resource type="Resource" uid="uid://bhh1bwkf28nst" path="res://data/clues/stage2/used.tres" id="15_2rpr7"]
+[ext_resource type="Resource" uid="uid://tsl2yv8afrab" path="res://data/clues/stage2/want.tres" id="16_jtiuo"]
 
 [resource]
 script = ExtResource("2_y62w6")
-clues = Array[ExtResource("1_83drw")]([ExtResource("2_qt0bw"), ExtResource("3_lyoij"), ExtResource("4_sy4ij"), ExtResource("5_2yo73"), ExtResource("6_pb30l"), ExtResource("7_jacvd")])
+clues = Array[ExtResource("1_83drw")]([ExtResource("2_qt0bw"), ExtResource("3_q5wr2"), ExtResource("3_lyoij"), ExtResource("5_w6fbe"), ExtResource("4_sy4ij"), ExtResource("5_2yo73"), ExtResource("6_pb30l"), ExtResource("9_e8qb7"), ExtResource("10_myblk"), ExtResource("7_jacvd"), ExtResource("12_le8oq"), ExtResource("13_6kmoj"), ExtResource("14_ntp3x"), ExtResource("15_2rpr7"), ExtResource("16_jtiuo")])
 solved_painting = ExtResource("9_lyoij")
 metadata/_custom_type_script = "uid://36sgsjjy6v27"

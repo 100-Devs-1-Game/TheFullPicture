@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ClueData" load_steps=2 format=3 uid="uid://b8ufw2ptde6lg"]
+
+[ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_w8tmm"]
+
+[resource]
+script = ExtResource("1_w8tmm")
+word = "Police Chief"
+metadata/_custom_type_script = "uid://ct3rmdycaa212"

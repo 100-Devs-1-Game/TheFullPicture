@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ClueData" load_steps=2 format=3 uid="uid://bm0okyngppusp"]
+
+[ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_e1cks"]
+
+[resource]
+script = ExtResource("1_e1cks")
+word = "had"
+metadata/_custom_type_script = "uid://ct3rmdycaa212"
