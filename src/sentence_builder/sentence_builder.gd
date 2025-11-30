@@ -72,6 +72,9 @@ func _process(_delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey:
+		if not event.pressed:
+			return
+
 		if event.keycode == KEY_F1:
 			if OS.is_debug_build():
 				solved()
