@@ -44,69 +44,70 @@ theme_override_styles/panel = ExtResource("2_ifxwd")
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 2
 
-[node name="Words" type="PanelContainer" parent="Panel/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Words" type="PanelContainer" parent="Panel/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_styles/panel = ExtResource("3_ifxwd")
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Words"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/HBoxContainer/Words"]
 layout_mode = 2
 theme_override_constants/margin_top = -30
 theme_override_constants/margin_bottom = -30
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/Words/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/Words/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Label" type="Label" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Panel/MarginContainer/HBoxContainer/Words/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "Words"
 label_settings = SubResource("LabelSettings_ng428")
 
-[node name="Checkbox GridContainer" type="GridContainer" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer"]
+[node name="Checkbox GridContainer" type="GridContainer" parent="Panel/MarginContainer/HBoxContainer/Words/MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/v_separation = -5
-columns = 5
+columns = 8
 
-[node name="CheckBox" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox" parent="Panel/MarginContainer/HBoxContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="CheckBox2" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox2" parent="Panel/MarginContainer/HBoxContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="CheckBox3" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox3" parent="Panel/MarginContainer/HBoxContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="CheckBox4" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox4" parent="Panel/MarginContainer/HBoxContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="CheckBox5" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox5" parent="Panel/MarginContainer/HBoxContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="CheckBox6" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox6" parent="Panel/MarginContainer/HBoxContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="CheckBox7" parent="Panel/MarginContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
+[node name="CheckBox7" parent="Panel/MarginContainer/HBoxContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
 
-[node name="Menu Button" parent="Panel/MarginContainer" instance=ExtResource("2_lxin7")]
+[node name="CheckBox8" parent="Panel/MarginContainer/HBoxContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
 
-[node name="Label" parent="Panel/MarginContainer/Menu Button" index="0"]
-text = "Menu"
-label_settings = SubResource("LabelSettings_1fep8")
+[node name="CheckBox9" parent="Panel/MarginContainer/HBoxContainer/Words/MarginContainer/HBoxContainer/Checkbox GridContainer" instance=ExtResource("5_1fep8")]
+layout_mode = 2
 
-[node name="Toggle Buttons" type="HBoxContainer" parent="Panel"]
+[node name="Toggle Buttons" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 40
+alignment = 2
 
-[node name="Sentence Button" type="TextureButton" parent="Panel/Toggle Buttons"]
+[node name="Sentence Button" type="TextureButton" parent="Panel/MarginContainer/HBoxContainer/Toggle Buttons"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -116,7 +117,7 @@ button_group = ExtResource("2_hlndb")
 texture_normal = ExtResource("6_nuau5")
 texture_pressed = ExtResource("3_lxin7")
 
-[node name="Label" type="Label" parent="Panel/Toggle Buttons/Sentence Button"]
+[node name="Label" type="Label" parent="Panel/MarginContainer/HBoxContainer/Toggle Buttons/Sentence Button"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -134,14 +135,14 @@ label_settings = ExtResource("10_wgcdy")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HoverComponent" type="Node" parent="Panel/Toggle Buttons/Sentence Button"]
+[node name="HoverComponent" type="Node" parent="Panel/MarginContainer/HBoxContainer/Toggle Buttons/Sentence Button"]
 script = ExtResource("5_lxin7")
 metadata/_custom_type_script = "uid://biajfv665ttlc"
 
-[node name="ClickSoundComponent" parent="Panel/Toggle Buttons/Sentence Button" instance=ExtResource("12_nfuip")]
+[node name="ClickSoundComponent" parent="Panel/MarginContainer/HBoxContainer/Toggle Buttons/Sentence Button" instance=ExtResource("12_nfuip")]
 click_sound = ExtResource("16_nfuip")
 
-[node name="Map Button" type="TextureButton" parent="Panel/Toggle Buttons"]
+[node name="Map Button" type="TextureButton" parent="Panel/MarginContainer/HBoxContainer/Toggle Buttons"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -152,7 +153,7 @@ button_group = ExtResource("2_hlndb")
 texture_normal = ExtResource("4_4gmb1")
 texture_pressed = ExtResource("5_hnn45")
 
-[node name="Label" type="Label" parent="Panel/Toggle Buttons/Map Button"]
+[node name="Label" type="Label" parent="Panel/MarginContainer/HBoxContainer/Toggle Buttons/Map Button"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -170,15 +171,24 @@ label_settings = ExtResource("10_wgcdy")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HoverComponent" type="Node" parent="Panel/Toggle Buttons/Map Button"]
+[node name="HoverComponent" type="Node" parent="Panel/MarginContainer/HBoxContainer/Toggle Buttons/Map Button"]
 script = ExtResource("5_lxin7")
 metadata/_custom_type_script = "uid://biajfv665ttlc"
 
-[node name="ClickSoundComponent" parent="Panel/Toggle Buttons/Map Button" instance=ExtResource("12_nfuip")]
+[node name="ClickSoundComponent" parent="Panel/MarginContainer/HBoxContainer/Toggle Buttons/Map Button" instance=ExtResource("12_nfuip")]
 click_sound = ExtResource("13_h7pcf")
 
+[node name="Menu Button" parent="Panel/MarginContainer" instance=ExtResource("2_lxin7")]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="Label" parent="Panel/MarginContainer/Menu Button" index="0"]
+text = "Menu"
+label_settings = SubResource("LabelSettings_1fep8")
+
+[connection signal="toggled" from="Panel/MarginContainer/HBoxContainer/Toggle Buttons/Sentence Button" to="." method="_on_sentence_button_toggled"]
+[connection signal="toggled" from="Panel/MarginContainer/HBoxContainer/Toggle Buttons/Map Button" to="." method="_on_map_button_toggled"]
 [connection signal="pressed" from="Panel/MarginContainer/Menu Button" to="." method="_on_menu_button_pressed"]
-[connection signal="toggled" from="Panel/Toggle Buttons/Sentence Button" to="." method="_on_sentence_button_toggled"]
-[connection signal="toggled" from="Panel/Toggle Buttons/Map Button" to="." method="_on_map_button_toggled"]
 
 [editable path="Panel/MarginContainer/Menu Button"]
