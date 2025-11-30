@@ -2,6 +2,7 @@ extends Node
 
 @export var disable_start: bool= false
 @export var skip_main_menu: bool= false
+@export var disable_music: bool= false
 
 @export var main_menu_scene: PackedScene
 @export var map_scene: PackedScene
@@ -18,8 +19,11 @@ func _ready() -> void:
 	if disable_start:
 		return
 
-	if OS.is_debug_build() and skip_main_menu:
-		goto_map()
+	if OS.is_debug_build():
+		if disable_music:
+			AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), true)
+		if skip_main_menu:
+			goto_map()
 
 
 func goto_main_menu():
