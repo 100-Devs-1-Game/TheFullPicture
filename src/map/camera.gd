@@ -15,7 +15,7 @@ var _zoom_level: int = 1  # 0 = fit, 1 = 1×, 2 = 2×
 
 
 func _ready() -> void:
-	EventManager.open_clues_ui.connect(func(data): set_process(false))
+	EventManager.open_clues_ui.connect(func(_data): set_process(false))
 	EventManager.clues_ui_closed.connect(func(): set_process(true))
 
 	_map = _find_map_node(get_tree().root)
@@ -57,7 +57,8 @@ func _process(delta: float) -> void:
 	if pan_input != Vector2.ZERO:
 		pan_input = pan_input.normalized()
 		_move_camera(pan_input * pan_speed * delta)
-
+		return
+		
 	# Edge panning
 	var mouse_pos: Vector2 = get_viewport().get_mouse_position()
 	var vp_rect: Rect2 = get_viewport_rect()
@@ -85,8 +86,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			get_viewport().set_input_as_handled()
 
 
-func _move_camera(offset: Vector2) -> void:
-	global_position += offset
+func _move_camera(p_offset: Vector2) -> void:
+	global_position += p_offset
 	_clamp_to_map_bounds()
 
 
