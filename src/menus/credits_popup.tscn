@@ -1,0 +1,84 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4ihjullkk6wq"]
+
+[ext_resource type="Script" uid="uid://dxvk40ynr6cyd" path="res://menus/credits_popup.gd" id="1_h1oen"]
+[ext_resource type="StyleBox" uid="uid://opg1fo6x4a5l" path="res://ui/panel_background.stylebox" id="1_ylo15"]
+[ext_resource type="FontFile" uid="uid://ccoh5tco61px" path="res://assets_external/fonts/Jim_Nightshade/JimNightshade-Regular.ttf" id="2_h1oen"]
+
+[node name="CreditsPopup" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h1oen")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_ylo15")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.13803378, 0.13803375, 0.13803375, 1)
+theme_override_constants/paragraph_separation = -3
+theme_override_constants/underline_alpha = 100
+theme_override_fonts/normal_font = ExtResource("2_h1oen")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[u]Lead Game Designer[/u]
+Axureé Rheeid
+"
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(350, 700)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.13803378, 0.13803375, 0.13803375, 1)
+theme_override_constants/paragraph_separation = -3
+theme_override_constants/underline_alpha = 100
+theme_override_fonts/normal_font = ExtResource("2_h1oen")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[u]2D Artist[/u]
+Axureé Rheeid
+
+[u]Composer[/u]
+Aaron Busch
+
+[u]Programmers[/u]
+Codimon
+game8024
+"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(350, 700)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.13803378, 0.13803375, 0.13803375, 1)
+theme_override_constants/paragraph_separation = -3
+theme_override_constants/underline_alpha = 100
+theme_override_fonts/normal_font = ExtResource("2_h1oen")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[u]Sound Designer[/u]
+LANCER
+
+[u]Voice Actor[/u]
+RisibleZombie
+
+[u]Writer[/u]
+reodnalezienie"
+horizontal_alignment = 1
+
+[connection signal="gui_input" from="PanelContainer" to="." method="_on_panel_container_gui_input"]
