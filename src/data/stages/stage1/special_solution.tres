@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SolutionData" load_steps=3 format=3 uid="uid://52cjgvgyofll"]
+
+[ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_uf0ks"]
+[ext_resource type="Script" uid="uid://c51qqc7u2l22g" path="res://data/solution_data.gd" id="2_78x6k"]
+
+[resource]
+script = ExtResource("2_78x6k")
+clues = Array[ExtResource("1_uf0ks")]([null, null, null, null])
+metadata/_custom_type_script = "uid://c51qqc7u2l22g"

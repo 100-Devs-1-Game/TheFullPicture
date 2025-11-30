@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SolutionData" load_steps=7 format=3 uid="uid://dcro60uc6mfum"]
+
+[ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_edcsx"]
+[ext_resource type="Resource" uid="uid://dmbr1hjpidnao" path="res://data/clues/stage1/victim.tres" id="2_h7jgk"]
+[ext_resource type="Resource" uid="uid://v3el3r1d00v1" path="res://data/clues/stage1/was.tres" id="3_nvatr"]
+[ext_resource type="Resource" uid="uid://cpup7502d0r3l" path="res://data/clues/stage1/already.tres" id="4_iho14"]
+[ext_resource type="Resource" uid="uid://ba6v3rq7ty6ls" path="res://data/clues/stage1/dead.tres" id="5_7q55f"]
+[ext_resource type="Script" uid="uid://c51qqc7u2l22g" path="res://data/solution_data.gd" id="6_ao3m2"]
+
+[resource]
+script = ExtResource("6_ao3m2")
+clues = Array[ExtResource("1_edcsx")]([ExtResource("2_h7jgk"), ExtResource("3_nvatr"), ExtResource("4_iho14"), ExtResource("5_7q55f")])
+metadata/_custom_type_script = "uid://c51qqc7u2l22g"

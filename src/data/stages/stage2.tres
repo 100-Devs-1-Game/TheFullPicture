@@ -23,4 +23,17 @@
 script = ExtResource("2_y62w6")
 clues = Array[ExtResource("1_83drw")]([ExtResource("2_qt0bw"), ExtResource("3_q5wr2"), ExtResource("3_lyoij"), ExtResource("5_w6fbe"), ExtResource("4_sy4ij"), ExtResource("5_2yo73"), ExtResource("6_pb30l"), ExtResource("9_e8qb7"), ExtResource("10_myblk"), ExtResource("7_jacvd"), ExtResource("12_le8oq"), ExtResource("13_6kmoj"), ExtResource("14_ntp3x"), ExtResource("15_2rpr7"), ExtResource("16_jtiuo")])
 solved_painting = ExtResource("9_lyoij")
+correct_dialog = "The Director was arrested shortly after you discovered the truth.
+
+...You still can’t believe he went that far.
+
+...Well, you don’t have time to think about that. Managing a gallery on your own proves to be more difficult than it seems. You almost crumble under the weight of the responsibility. Shade of unpaid debt looms over you and an unopened letter still lays on your desk.
+
+With all evil, though, comes a bit of kindness. You finally took down that painting. The exhibition feels clearer without it in sight. Maybe you’ll put it in the office?
+
+Right, no time to ponder. You have work to do.
+
+"
+fail_dialog = "Maybe you’re still drunk."
+incorrect_dialog = "Not quite the answer you’re looking for."
 metadata/_custom_type_script = "uid://36sgsjjy6v27"

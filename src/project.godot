@@ -24,6 +24,7 @@ GameData="*res://global/game_data.tscn"
 GameSettings="*res://global/game_settings.gd"
 MusicPlayer="*res://global/music_player.tscn"
 SceneLoader="*res://global/scene_loader.tscn"
+GameFreezer="*res://global/game_freezer.gd"
 
 [debug]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cbckjjt724yb2"]
+[gd_scene load_steps=24 format=3 uid="uid://cbckjjt724yb2"]
 
 [ext_resource type="Texture2D" uid="uid://d5kilvwruv80" path="res://assets/art/sentence_builder/UIScreen.png" id="1_0041t"]
 [ext_resource type="Script" uid="uid://1du2ec3qy8pt" path="res://sentence_builder/sentence_builder.gd" id="1_ipavy"]
@@ -73,11 +73,6 @@ font_size = 40
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahu4t"]
 bg_color = Color(0, 0, 0, 0.5254902)
-
-[sub_resource type="LabelSettings" id="LabelSettings_vq4cl"]
-font = ExtResource("8_4d1ai")
-font_size = 40
-font_color = Color(0.18120003, 0.18120006, 0.18120003, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_y6ynu"]
 font = ExtResource("10_q7o4a")
@@ -248,32 +243,68 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ahu4t")
 
-[node name="Panel Container" type="PanelContainer" parent="Popup Panel"]
-custom_minimum_size = Vector2(400, 400)
+[node name="CenterContainer" type="CenterContainer" parent="Popup Panel"]
 layout_mode = 0
-offset_left = 1312.0
-offset_top = 251.0
-offset_right = 1712.0
-offset_bottom = 651.0
+offset_left = 903.0
+offset_top = 81.0
+offset_right = 1843.0
+offset_bottom = 801.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup Panel/CenterContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Panel Container" type="PanelContainer" parent="Popup Panel/CenterContainer/MarginContainer"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 theme_override_styles/panel = ExtResource("7_ahu4t")
 
-[node name="Popup Label" type="Label" parent="Popup Panel/Panel Container"]
-custom_minimum_size = Vector2(320, 0)
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup Panel/CenterContainer/MarginContainer/Panel Container"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Popup Label" type="RichTextLabel" parent="Popup Panel/CenterContainer/MarginContainer/Panel Container/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 400)
 layout_mode = 2
 size_flags_vertical = 0
-text = "...Maybe you're still drunk"
-label_settings = SubResource("LabelSettings_vq4cl")
-autowrap_mode = 3
+theme_override_colors/default_color = Color(0.17163706, 0.17163706, 0.17163703, 1)
+theme_override_fonts/normal_font = ExtResource("8_4d1ai")
+theme_override_font_sizes/normal_font_size = 40
+text = "The Director was arrested shortly after you discovered the truth.
 
-[node name="Try Again Button" parent="Popup Panel/Panel Container" instance=ExtResource("9_c33to")]
+...You still can’t believe he went that far.
+
+...Well, you don’t have time to think about that. Managing a gallery on your own proves to be more difficult than it seems. You almost crumble under the weight of the responsibility. Shade of unpaid debt looms over you and an unopened letter still lays on your desk.
+
+With all evil, though, comes a bit of kindness. You finally took down that painting. The exhibition feels clearer without it in sight. Maybe you’ll put it in the office?
+
+Right, no time to ponder. You have work to do.
+
+"
+
+[node name="Try Again Button" parent="Popup Panel/CenterContainer/MarginContainer/Panel Container/VBoxContainer" instance=ExtResource("9_c33to")]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 8
+size_flags_vertical = 10
 
-[node name="Label" parent="Popup Panel/Panel Container/Try Again Button" index="0"]
+[node name="Label" parent="Popup Panel/CenterContainer/MarginContainer/Panel Container/VBoxContainer/Try Again Button" index="0"]
 text = "Try Again"
+label_settings = SubResource("LabelSettings_y6ynu")
+
+[node name="Continue Button" parent="Popup Panel/CenterContainer/MarginContainer/Panel Container/VBoxContainer" instance=ExtResource("9_c33to")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+
+[node name="Label" parent="Popup Panel/CenterContainer/MarginContainer/Panel Container/VBoxContainer/Continue Button" index="0"]
+text = "Continue"
 label_settings = SubResource("LabelSettings_y6ynu")
 
 [node name="AudioStreamPlayer Fill Slot" type="AudioStreamPlayer" parent="."]
@@ -285,6 +316,7 @@ stream = ExtResource("12_cg4df")
 bus = &"Sfx"
 
 [node name="AudioStreamPlayer Correct" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("13_srpaq")
 bus = &"Sfx"
 
@@ -292,6 +324,8 @@ bus = &"Sfx"
 stream = ExtResource("14_wy40q")
 bus = &"Sfx"
 
-[connection signal="pressed" from="Popup Panel/Panel Container/Try Again Button" to="." method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="Popup Panel/CenterContainer/MarginContainer/Panel Container/VBoxContainer/Try Again Button" to="." method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="Popup Panel/CenterContainer/MarginContainer/Panel Container/VBoxContainer/Continue Button" to="." method="_on_continue_button_pressed"]
 
-[editable path="Popup Panel/Panel Container/Try Again Button"]
+[editable path="Popup Panel/CenterContainer/MarginContainer/Panel Container/VBoxContainer/Try Again Button"]
+[editable path="Popup Panel/CenterContainer/MarginContainer/Panel Container/VBoxContainer/Continue Button"]

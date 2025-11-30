@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="StageData" load_steps=17 format=3 uid="uid://dc2yaw4w7y3yf"]
+[gd_resource type="Resource" script_class="StageData" load_steps=16 format=3 uid="uid://dc2yaw4w7y3yf"]
 
 [ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_qy5xu"]
 [ext_resource type="Script" uid="uid://36sgsjjy6v27" path="res://data/stage_data.gd" id="2_ejx7n"]
@@ -14,16 +14,32 @@
 [ext_resource type="Resource" uid="uid://v3el3r1d00v1" path="res://data/clues/stage1/was.tres" id="9_ufgxt"]
 [ext_resource type="Resource" uid="uid://bnme0w3051x6n" path="res://data/clues/stage1/you.tres" id="12_4rclw"]
 [ext_resource type="Texture2D" uid="uid://dx8pqmdv4gs4o" path="res://assets/art/sentence_builder/SolvedPainting1.png" id="12_kcxmc"]
-[ext_resource type="Script" uid="uid://c51qqc7u2l22g" path="res://data/solution_data.gd" id="12_oah3i"]
-
-[sub_resource type="Resource" id="Resource_ntlvh"]
-script = ExtResource("12_oah3i")
-clues = Array[ExtResource("1_qy5xu")]([ExtResource("9_kcxmc"), ExtResource("9_ufgxt"), ExtResource("2_lw6or"), ExtResource("6_ntlvh")])
-metadata/_custom_type_script = "uid://c51qqc7u2l22g"
+[ext_resource type="Resource" uid="uid://deiq2vop4hat6" path="res://data/stages/stage1/solution_container.tres" id="14_4kayx"]
 
 [resource]
 script = ExtResource("2_ejx7n")
 clues = Array[ExtResource("1_qy5xu")]([ExtResource("2_lw6or"), ExtResource("3_455ic"), ExtResource("4_kcxmc"), ExtResource("5_oah3i"), ExtResource("6_ntlvh"), ExtResource("7_4kayx"), ExtResource("8_4kayx"), ExtResource("8_4rclw"), ExtResource("9_kcxmc"), ExtResource("9_ufgxt"), ExtResource("12_4rclw")])
 solved_painting = ExtResource("12_kcxmc")
-solution = SubResource("Resource_ntlvh")
+solution_container = ExtResource("14_4kayx")
+pre_placed_clues = Dictionary[int, String]({
+0: "the"
+})
+correct_dialog = "Assistant: But if it wasn’t you… then who?
+
+The Artist: ...
+
+Assistant: There’s a place we haven’t checked yet. The Director’s Office.
+
+Artist: We aren’t supposed to go in there. Besides, the door is locked.
+
+Assistant: The Police Chief herself gave me the key. 
+
+The Artist: ...
+
+Assistant: Someone tried to frame you. We are goingto find out who
+by all means necessary.
+"
+fail_dialog = "Maybe you’re still drunk."
+incorrect_dialog = "Not quite the answer you’re looking for."
+special_dialog = "You would’ve ended up in the trash if it wasn’t for the Director’s insistence."
 metadata/_custom_type_script = "uid://36sgsjjy6v27"
