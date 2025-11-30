@@ -201,12 +201,12 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(450, 500)
 layout_mode = 0
 offset_left = 28.0
-offset_top = 292.0
-offset_right = 540.0
-offset_bottom = 792.0
+offset_top = 198.0
+offset_right = 746.0
+offset_bottom = 698.0
 theme_override_constants/h_separation = -100
 theme_override_constants/v_separation = -20
-columns = 2
+columns = 3
 
 [node name="ClueButton" parent="Clues" instance=ExtResource("3_svl1a")]
 layout_mode = 2
@@ -214,10 +214,10 @@ layout_mode = 2
 [node name="Control" type="Control" parent="Clues"]
 layout_mode = 2
 
-[node name="Control2" type="Control" parent="Clues"]
+[node name="ClueButton2" parent="Clues" instance=ExtResource("3_svl1a")]
 layout_mode = 2
 
-[node name="ClueButton2" parent="Clues" instance=ExtResource("3_svl1a")]
+[node name="Control2" type="Control" parent="Clues"]
 layout_mode = 2
 
 [node name="ClueButton3" parent="Clues" instance=ExtResource("3_svl1a")]
@@ -226,10 +226,10 @@ layout_mode = 2
 [node name="Control3" type="Control" parent="Clues"]
 layout_mode = 2
 
-[node name="Control4" type="Control" parent="Clues"]
+[node name="ClueButton4" parent="Clues" instance=ExtResource("3_svl1a")]
 layout_mode = 2
 
-[node name="ClueButton4" parent="Clues" instance=ExtResource("3_svl1a")]
+[node name="Control4" type="Control" parent="Clues"]
 layout_mode = 2
 
 [node name="ClueButton5" parent="Clues" instance=ExtResource("3_svl1a")]

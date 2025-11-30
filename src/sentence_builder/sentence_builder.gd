@@ -36,9 +36,10 @@ func _ready() -> void:
 		child.queue_free()
 	
 	var grid_pos: Vector2i
+	var space:= false
 	for clue in GameData.current_stage.clues:
 		@warning_ignore("integer_division")
-		while (grid_pos.x + grid_pos.y) % 2 > 0:
+		if space:
 			clues.add_child(Control.new())
 			grid_pos= advance_grid_pos(grid_pos)
 			
@@ -47,7 +48,8 @@ func _ready() -> void:
 		button.set_clue(clue)
 		button.start_dragging.connect(on_start_dragging)
 		grid_pos= advance_grid_pos(grid_pos)
-
+		space= true
+		
 	MusicPlayer.play_sentence()
 
 

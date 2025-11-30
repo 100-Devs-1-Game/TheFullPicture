@@ -8,7 +8,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_fp6s1"]
 font = ExtResource("2_orep8")
-font_size = 40
+font_size = 35
 
 [node name="ClueButton" type="TextureRect"]
 offset_right = 306.0
@@ -26,9 +26,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -59.0
+offset_left = -102.0
 offset_top = -30.5
-offset_right = 141.0
+offset_right = 98.0
 offset_bottom = 19.5
 grow_horizontal = 2
 grow_vertical = 2
