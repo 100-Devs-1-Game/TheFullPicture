@@ -60,7 +60,9 @@ func _ready() -> void:
 		button.start_dragging.connect(on_start_dragging)
 		grid_pos= advance_grid_pos(grid_pos)
 		space= true
-		
+
+	%Question.text= current_stage.question
+
 	MusicPlayer.play_sentence()
 
 

@@ -3,6 +3,7 @@ extends Resource
 
 @export var clues: Array[ClueData]
 @export var solved_painting: Texture2D
+@export var question: String
 @export var solution_container: SolutionContainer
 @export var pre_placed_clues: Dictionary[int, String]
 

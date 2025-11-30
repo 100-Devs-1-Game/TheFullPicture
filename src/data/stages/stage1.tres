@@ -20,6 +20,7 @@
 script = ExtResource("2_ejx7n")
 clues = Array[ExtResource("1_qy5xu")]([ExtResource("2_lw6or"), ExtResource("3_455ic"), ExtResource("4_kcxmc"), ExtResource("5_oah3i"), ExtResource("6_ntlvh"), ExtResource("7_4kayx"), ExtResource("8_4kayx"), ExtResource("8_4rclw"), ExtResource("9_kcxmc"), ExtResource("9_ufgxt"), ExtResource("12_4rclw")])
 solved_painting = ExtResource("12_kcxmc")
+question = "You couldn't have commited the crime, because.."
 solution_container = ExtResource("14_4kayx")
 pre_placed_clues = Dictionary[int, String]({
 0: "the"
