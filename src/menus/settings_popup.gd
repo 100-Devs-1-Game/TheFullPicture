@@ -22,6 +22,7 @@ func _on_save_button_pressed() -> void:
 	GameSettings.fullscreen= fullscreen_check_box.button_pressed
 	GameSettings.save_settings()
 	hide()
+	closed.emit()
 
 
 func _on_cancel_button_pressed() -> void:
