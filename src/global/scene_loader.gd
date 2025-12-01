@@ -11,7 +11,7 @@ extends Node
 @export var game_panel_scene: PackedScene
 
 
-var game_panel: CanvasLayer
+var game_panel: GamePanel
 
 
 
@@ -28,6 +28,7 @@ func _ready() -> void:
 
 func goto_main_menu():
 	if game_panel:
+		GameData.save_checkboxes()
 		game_panel.queue_free()
 	get_tree().change_scene_to_packed.call_deferred(main_menu_scene)
 

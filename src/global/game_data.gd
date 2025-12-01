@@ -4,6 +4,8 @@ extends Node
 var clues: Dictionary[String, ClueData]
 
 var current_stage: StageData
+var saved_checkboxes: Array[int]
+
 
 
 func _ready() -> void:
@@ -18,6 +20,7 @@ func advance_stage():
 	var idx:= get_current_stage_index() + 1 
 	if idx < stages.size():
 		current_stage= stages[idx]
+		GameData.saved_checkboxes.clear()
 		EventManager.entered_next_stage.emit()
 
 
@@ -28,6 +31,16 @@ func reset():
 
 	for clue: ClueData in clues.values():
 		clue.discovered= false
+
+	saved_checkboxes.clear()
+
+
+func save_checkboxes():
+	saved_checkboxes.clear()
+	for i in SceneLoader.game_panel.checkbox_grid.get_child_count():
+		var checkbox: CheckBox= SceneLoader.game_panel.checkbox_grid.get_child(i)
+		if checkbox.button_pressed:
+			saved_checkboxes.append(i)
 
 
 func get_current_stage_index()-> int:

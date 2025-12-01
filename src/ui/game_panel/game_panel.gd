@@ -1,3 +1,4 @@
+class_name GamePanel
 extends CanvasLayer
 
 @export var checkbox_scene: PackedScene
@@ -18,8 +19,10 @@ func update_check_boxes():
 		child.queue_free()
 
 	for i in GameData.current_stage.clues.size():
-		var child= checkbox_scene.instantiate()
+		var child: CheckBox= checkbox_scene.instantiate()
 		checkbox_grid.add_child(child)
+		if i in GameData.saved_checkboxes:
+			child.button_pressed= true
 
 
 func _on_sentence_button_toggled(toggled_on: bool) -> void:
