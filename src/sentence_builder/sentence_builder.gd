@@ -63,6 +63,9 @@ func _ready() -> void:
 	var grid_pos: Vector2i
 	var space:= false
 	for clue in current_stage.clues:
+		if not clue.discovered:
+			continue
+			
 		if space:
 			clues.add_child(Control.new())
 			grid_pos= advance_grid_pos(grid_pos)
