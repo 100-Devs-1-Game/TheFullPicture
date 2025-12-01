@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cbckjjt724yb2"]
+[gd_scene load_steps=29 format=3 uid="uid://cbckjjt724yb2"]
 
 [ext_resource type="Texture2D" uid="uid://d5kilvwruv80" path="res://assets/art/sentence_builder/UIScreen.png" id="1_0041t"]
 [ext_resource type="Script" uid="uid://1du2ec3qy8pt" path="res://sentence_builder/sentence_builder.gd" id="1_ipavy"]
@@ -58,6 +58,56 @@ border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
 border_blend = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h10nr"]
+resource_local_to_scene = true
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vq4cl"]
+resource_local_to_scene = true
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6ynu"]
+resource_local_to_scene = true
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pw1op"]
+resource_local_to_scene = true
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7lcaj"]
+resource_local_to_scene = true
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.72156864, 0, 0.12156863, 0.6627451)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4j1q"]
 resource_local_to_scene = true
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 3
@@ -195,7 +245,7 @@ offset_right = 628.0
 offset_bottom = 198.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
 stage = 1
-frame_stylebox = SubResource("StyleBoxFlat_elr6o")
+frame_stylebox = SubResource("StyleBoxFlat_vq4cl")
 
 [node name="SolutionSlot7" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
@@ -205,7 +255,7 @@ offset_right = 628.0
 offset_bottom = 303.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
 stage = 1
-frame_stylebox = SubResource("StyleBoxFlat_cg4df")
+frame_stylebox = SubResource("StyleBoxFlat_y6ynu")
 
 [node name="SolutionSlot8" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
@@ -215,7 +265,7 @@ offset_right = 628.0
 offset_bottom = 409.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
 stage = 1
-frame_stylebox = SubResource("StyleBoxFlat_srpaq")
+frame_stylebox = SubResource("StyleBoxFlat_pw1op")
 
 [node name="SolutionSlot9" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
@@ -225,7 +275,7 @@ offset_right = 628.3
 offset_bottom = 515.5
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
 stage = 1
-frame_stylebox = SubResource("StyleBoxFlat_wy40q")
+frame_stylebox = SubResource("StyleBoxFlat_7lcaj")
 
 [node name="SolutionSlot10" parent="Ribbon/Solution" instance=ExtResource("5_ttsbn")]
 layout_mode = 0
@@ -235,7 +285,7 @@ offset_right = 628.3
 offset_bottom = 621.5
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0sqpq")
 stage = 1
-frame_stylebox = SubResource("StyleBoxFlat_h10nr")
+frame_stylebox = SubResource("StyleBoxFlat_n4j1q")
 
 [node name="Question" type="Label" parent="."]
 unique_name_in_owner = true

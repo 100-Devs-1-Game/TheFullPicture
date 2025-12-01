@@ -9,7 +9,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_4fjdm"]
 font = ExtResource("1_vurw3")
 font_size = 60
-font_color = Color(0, 0, 0, 1)
+font_color = Color(0.92941177, 0.3764706, 0.3764706, 1)
 
 [node name="SolutionSlot" type="Label"]
 custom_minimum_size = Vector2(300, 100)

@@ -45,8 +45,9 @@ func _ready() -> void:
 		if current_stage.pre_placed_clues.has(i):
 			slot.text= current_stage.pre_placed_clues[i]
 			var text_length: int= len(slot.text)
+			slot.label_settings= slot.label_settings.duplicate()
+			slot.label_settings.font_color= Color.BLACK.blend(Color.DIM_GRAY)
 			if text_length > 10:
-				slot.label_settings= slot.label_settings.duplicate()
 				slot.label_settings.font_size-= text_length
 		else:
 			slot.mouse_entered.connect(on_hover_slot.bind(slot))
