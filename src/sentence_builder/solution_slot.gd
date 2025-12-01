@@ -3,6 +3,7 @@ extends Label
 
 signal remove_clue(button: ClueButton)
 
+@export var stage: int= 0
 @export var frame_stylebox: StyleBoxFlat
 
 var clue_button: ClueButton

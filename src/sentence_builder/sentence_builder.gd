@@ -30,6 +30,15 @@ var filled_counter:= 0
 func _ready() -> void:
 	var current_stage:= GameData.current_stage
 	
+	var stage_index:= GameData.get_current_stage_index() 
+	if stage_index > 0:
+		%Ribbon2.show()
+	
+	for slot: SolutionSlot in solution.get_children():
+		if slot.stage > stage_index:
+			solution.remove_child(slot)
+			slot.queue_free()
+	
 	for i in solution.get_child_count():
 		var slot: SolutionSlot= solution.get_child(i)
 		
@@ -203,4 +212,5 @@ func _on_continue_button_pressed() -> void:
 		GameData.reset()
 		SceneLoader.goto_main_menu()
 	else:
+		
 		SceneLoader.goto_map()

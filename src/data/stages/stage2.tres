@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="StageData" load_steps=19 format=3 uid="uid://dqkupm0q5526b"]
+[gd_resource type="Resource" script_class="StageData" load_steps=23 format=3 uid="uid://dqkupm0q5526b"]
 
 [ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_83drw"]
 [ext_resource type="Resource" uid="uid://dx1l2xf1ym7tw" path="res://data/clues/stage2/artistic.tres" id="2_qt0bw"]
@@ -18,12 +18,30 @@
 [ext_resource type="Resource" uid="uid://cbsffik4ase6r" path="res://data/clues/stage2/the_storage.tres" id="14_ntp3x"]
 [ext_resource type="Resource" uid="uid://bhh1bwkf28nst" path="res://data/clues/stage2/used.tres" id="15_2rpr7"]
 [ext_resource type="Resource" uid="uid://tsl2yv8afrab" path="res://data/clues/stage2/want.tres" id="16_jtiuo"]
+[ext_resource type="Script" uid="uid://c51qqc7u2l22g" path="res://data/solution_data.gd" id="18_e8qb7"]
+[ext_resource type="Script" uid="uid://bhxo62hq0jf8j" path="res://data/solution_container.gd" id="19_myblk"]
+
+[sub_resource type="Resource" id="Resource_le8oq"]
+script = ExtResource("18_e8qb7")
+clues = Array[ExtResource("1_83drw")]([ExtResource("3_q5wr2"), ExtResource("9_e8qb7"), ExtResource("6_pb30l"), ExtResource("3_lyoij"), ExtResource("13_6kmoj"), ExtResource("5_w6fbe"), ExtResource("14_ntp3x")])
+metadata/_custom_type_script = "uid://c51qqc7u2l22g"
+
+[sub_resource type="Resource" id="Resource_6kmoj"]
+script = ExtResource("19_myblk")
+correct_solution = SubResource("Resource_le8oq")
+metadata/_custom_type_script = "uid://bhxo62hq0jf8j"
 
 [resource]
 script = ExtResource("2_y62w6")
 clues = Array[ExtResource("1_83drw")]([ExtResource("2_qt0bw"), ExtResource("3_q5wr2"), ExtResource("3_lyoij"), ExtResource("5_w6fbe"), ExtResource("4_sy4ij"), ExtResource("5_2yo73"), ExtResource("6_pb30l"), ExtResource("9_e8qb7"), ExtResource("10_myblk"), ExtResource("7_jacvd"), ExtResource("12_le8oq"), ExtResource("13_6kmoj"), ExtResource("14_ntp3x"), ExtResource("15_2rpr7"), ExtResource("16_jtiuo")])
 solved_painting = ExtResource("9_lyoij")
 question = "Who is the real culprit? How did they commit the crime?"
+solution_container = SubResource("Resource_6kmoj")
+pre_placed_clues = Dictionary[int, String]({
+0: "It was the",
+2: "They did it because",
+5: "They"
+})
 correct_dialog = "The Director was arrested shortly after you discovered the truth.
 
 ...You still can’t believe he went that far.
