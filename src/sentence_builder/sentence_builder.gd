@@ -43,7 +43,11 @@ func _ready() -> void:
 		var slot: SolutionSlot= solution.get_child(i)
 		
 		if current_stage.pre_placed_clues.has(i):
-			slot.text= current_stage.pre_placed_clues[i].to_upper()
+			slot.text= current_stage.pre_placed_clues[i]
+			var text_length: int= len(slot.text)
+			if text_length > 10:
+				slot.label_settings= slot.label_settings.duplicate()
+				slot.label_settings.font_size-= text_length
 		else:
 			slot.mouse_entered.connect(on_hover_slot.bind(slot))
 			slot.mouse_exited.connect(func(): hover_slot= null)
