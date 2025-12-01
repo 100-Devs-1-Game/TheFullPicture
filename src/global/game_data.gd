@@ -21,5 +21,14 @@ func advance_stage():
 		EventManager.entered_next_stage.emit()
 
 
+func reset():
+	for stage in stages:
+		stage.completed= false
+		current_stage= stages[0]
+
+	for clue: ClueData in clues.values():
+		clue.discovered= false
+
+
 func get_current_stage_index()-> int:
 	return stages.find(current_stage)
