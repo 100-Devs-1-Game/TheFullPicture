@@ -39,7 +39,7 @@ question = "Who is the real culprit? How did they commit the crime?"
 solution_container = SubResource("Resource_6kmoj")
 pre_placed_clues = Dictionary[int, String]({
 0: "It was the",
-2: "They did it because",
+2: "They did it because they",
 5: "They"
 })
 correct_dialog = "The Director was arrested shortly after you discovered the truth.
