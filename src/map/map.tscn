@@ -52,42 +52,49 @@ script = ExtResource("7_kxmgb")
 [node name="Interactable Objects" type="Node2D" parent="."]
 
 [node name="Body" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+collision_layer = 0
 data = ExtResource("16_w1ifk")
 
 [node name="CollisionPolygon2D" parent="Interactable Objects/Body" index="0"]
 polygon = PackedVector2Array(1209, 1122, 1411, 966, 1473, 967, 1479, 1025, 1263, 1163)
 
 [node name="Painting" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+collision_layer = 0
 data = ExtResource("15_8lto5")
 
 [node name="CollisionPolygon2D" parent="Interactable Objects/Painting" index="0"]
 polygon = PackedVector2Array(1955, 1321, 2028, 1398, 2027, 1524, 1951, 1447)
 
 [node name="Painting 2" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+collision_layer = 0
 data = ExtResource("16_21p51")
 
 [node name="CollisionPolygon2D" parent="Interactable Objects/Painting 2" index="0"]
 polygon = PackedVector2Array(952, 1035, 1062, 962, 1066, 1102, 954, 1174)
 
 [node name="Liquor Bottles" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+collision_layer = 0
 data = ExtResource("17_xar17")
 
 [node name="CollisionPolygon2D" parent="Interactable Objects/Liquor Bottles" index="0"]
 polygon = PackedVector2Array(2819, 1305, 2855, 1281, 2910, 1334, 2916, 1411, 2876, 1414)
 
 [node name="Door" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+collision_layer = 0
 data = ExtResource("18_iqbtl")
 
 [node name="CollisionPolygon2D" parent="Interactable Objects/Door" index="0"]
 polygon = PackedVector2Array(2321, 866, 2401, 814, 2407, 1027, 2324, 1079)
 
 [node name="Closed Window" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+collision_layer = 0
 data = ExtResource("19_81obp")
 
 [node name="CollisionPolygon2D" parent="Interactable Objects/Closed Window" index="0"]
 polygon = PackedVector2Array(963, 585, 1036, 545, 1038, 721, 962, 772)
 
 [node name="Neat Page" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+collision_layer = 0
 data = ExtResource("20_81obp")
 unlock_stage = 1
 
@@ -95,6 +102,7 @@ unlock_stage = 1
 polygon = PackedVector2Array(2086, 851, 2191, 780, 2226, 817, 2118, 886)
 
 [node name="Stained Note" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+collision_layer = 0
 data = ExtResource("21_gw5x3")
 unlock_stage = 1
 
@@ -102,6 +110,7 @@ unlock_stage = 1
 polygon = PackedVector2Array(1798, 509, 1899, 442, 1950, 497, 1847, 564)
 
 [node name="Empty Wall" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+collision_layer = 0
 data = ExtResource("22_wwcqt")
 unlock_stage = 1
 
@@ -109,6 +118,7 @@ unlock_stage = 1
 polygon = PackedVector2Array(2021, 720, 2134, 647, 2143, 731, 2032, 800)
 
 [node name="Untouched Liquor" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+collision_layer = 0
 data = ExtResource("23_ofiht")
 unlock_stage = 1
 
@@ -116,6 +126,7 @@ unlock_stage = 1
 polygon = PackedVector2Array(1753, 153, 1791, 132, 1796, 182, 1759, 206)
 
 [node name="Drag Marks" parent="Interactable Objects" instance=ExtResource("15_58xwf")]
+collision_layer = 0
 data = ExtResource("24_wwcqt")
 unlock_stage = 1
 

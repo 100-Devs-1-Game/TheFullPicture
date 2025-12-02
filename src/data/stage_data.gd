@@ -13,9 +13,12 @@ extends Resource
 @export_multiline var special_dialog: String
 
 var completed:= false
+var initially_discovered_clues: int= 0
 
 
 
 func init():
 	for clue in clues:
 		GameData.clues[clue.word.to_lower()]= clue
+		if clue.discovered:
+			initially_discovered_clues+= 1

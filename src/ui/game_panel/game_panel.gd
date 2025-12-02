@@ -18,7 +18,9 @@ func update_check_boxes():
 		checkbox_grid.remove_child(child)
 		child.queue_free()
 
-	for i in GameData.current_stage.clues.size():
+	var current_stage:= GameData.current_stage
+	
+	for i in current_stage.clues.size() - current_stage.initially_discovered_clues:
 		var child: CheckBox= checkbox_scene.instantiate()
 		checkbox_grid.add_child(child)
 		if i in GameData.saved_checkboxes:
