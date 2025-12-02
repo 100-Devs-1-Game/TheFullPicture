@@ -21,7 +21,7 @@ func return_button():
 
 func _on_label_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		if event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			start_dragging.emit(self)
 			modulate= Color.TRANSPARENT
 			audio_player.play()
