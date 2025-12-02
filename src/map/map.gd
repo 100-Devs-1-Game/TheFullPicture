@@ -8,6 +8,7 @@ extends Node2D
 @export var stages: Array[ImageCollection]
 
 @export_tool_button("Init Canvas") var init_canvas_action = init_canvas
+@export_tool_button("Print Clues") var print_clues_action = print_clues
 
 @onready var canvas: Node2D = $Canvas
 @onready var interactable_objects: Node2D = $"Interactable Objects"
@@ -31,6 +32,9 @@ func _ready() -> void:
 		map_button.button_pressed= true
 
 	MusicPlayer.play_game()
+
+	if OS.is_debug_build():
+		print_clues()
 
 
 func init_canvas(stage_idx: int= 0):
@@ -58,4 +62,12 @@ func init_canvas(stage_idx: int= 0):
 		if pos.x / image_size.x == columns:
 			pos.y+= image_size.y
 			pos.x= 0
-			
+
+
+func print_clues():
+	var stage:= 0
+	for obj: InteractableObject in interactable_objects.get_children():
+		if obj.unlock_stage > stage:
+			stage= obj.unlock_stage
+			prints("Stage 2")
+		obj.data.parse()

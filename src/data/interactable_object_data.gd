@@ -12,7 +12,7 @@ var description: String
 
 
 func preparse_description():
-	print("Pre-parsing ", clues_file)
+	#print("Pre-parsing ", clues_file)
 	var result: String
 	result= description.replace("<clue>", "[url]")
 	result= result.replace("</clue>", "[/url]")
@@ -27,14 +27,13 @@ func preparse_description():
 
 		result= "".join(splits) 
 	
-	print(result)
-	print()
+	#print(result)
+	#print()
 	description= result
 
 
 func parse()-> String:
-	prints("Parse", clues_file)
-	
+	#prints("Parse", clues_file)
 	var result:= description
 
 	var splits:= result.split("[url")
@@ -60,5 +59,5 @@ func parse()-> String:
 			
 		result= "".join(splits) 
 	
-	print(result)
+	#print(result)
 	return result
