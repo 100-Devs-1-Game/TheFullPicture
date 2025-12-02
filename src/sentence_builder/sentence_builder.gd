@@ -86,7 +86,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if dragging_button:
 		if Input.is_action_just_released("drag"):
-			if hover_slot:
+			if hover_slot and not hover_slot.clue_button:
 				hover_slot.fill(dragging_button)
 				filled_counter+= 1
 				assert(filled_counter <= solution.get_child_count())
