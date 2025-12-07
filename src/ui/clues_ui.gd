@@ -40,7 +40,7 @@ func on_open(p_data: InteractableObjectData):
 		return
 	if fade_tween and fade_tween.is_running():
 		fade_tween.kill()
-		audio_player_voice.volume_db= 0
+	audio_player_voice.volume_db= 0
 	audio_player_voice.stop()
 	audio_player_voice.stream= data.audio
 	audio_player_voice.play()
