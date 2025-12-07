@@ -5,5 +5,4 @@
 [resource]
 script = ExtResource("1_egqun")
 word = "tears"
-discovered = true
 metadata/_custom_type_script = "uid://ct3rmdycaa212"
