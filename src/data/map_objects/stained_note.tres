@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="InteractableObjectData" load_steps=2 format=3 uid="uid://2uiahc6jrgtb"]
+[gd_resource type="Resource" script_class="InteractableObjectData" load_steps=3 format=3 uid="uid://2uiahc6jrgtb"]
 
+[ext_resource type="AudioStream" uid="uid://cj8eisdtlhtxq" path="res://assets/voice/artist/stage2/clues/you can only.mp3" id="1_64gwl"]
 [ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_buwlp"]
 
 [resource]
 script = ExtResource("1_buwlp")
 name = "Stained Note"
 clues_file = "res://data/map_objects/txt/stained note 2nd stage.txt"
+audio = ExtResource("1_64gwl")
 metadata/_custom_type_script = "uid://dmnq1txl08h0i"

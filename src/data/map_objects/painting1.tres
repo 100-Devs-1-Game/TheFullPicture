@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="InteractableObjectData" load_steps=2 format=3 uid="uid://cxyohc2camti1"]
+[gd_resource type="Resource" script_class="InteractableObjectData" load_steps=3 format=3 uid="uid://cxyohc2camti1"]
 
 [ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_a5x7u"]
+[ext_resource type="AudioStream" uid="uid://ce1tqfdlk21i5" path="res://assets/voice/artist/stage1/clues/the strokes are messy.mp3" id="1_ellvm"]
 
 [resource]
 script = ExtResource("1_a5x7u")
 name = "painting1"
 clues_file = "res://data/map_objects/txt/painting1 1st stage.txt"
+audio = ExtResource("1_ellvm")
 metadata/_custom_type_script = "uid://dmnq1txl08h0i"

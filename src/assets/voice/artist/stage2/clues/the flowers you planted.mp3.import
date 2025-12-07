@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jgryqhyqynfh"
+path="res://.godot/imported/the flowers you planted.mp3-20f50d5978dc841f2a47c289827a6a30.mp3str"
+
+[deps]
+
+source_file="res://assets/voice/artist/stage2/clues/the flowers you planted.mp3"
+dest_files=["res://.godot/imported/the flowers you planted.mp3-20f50d5978dc841f2a47c289827a6a30.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

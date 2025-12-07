@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="InteractableObjectData" load_steps=2 format=3 uid="uid://dy524mf1cg506"]
+[gd_resource type="Resource" script_class="InteractableObjectData" load_steps=3 format=3 uid="uid://dy524mf1cg506"]
 
+[ext_resource type="AudioStream" uid="uid://dxdd5sr1wugxv" path="res://assets/voice/artist/stage1/clues/the room is filled.mp3" id="1_15a7r"]
 [ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_jq0ar"]
 
 [resource]
 script = ExtResource("1_jq0ar")
 name = "closed_window"
 clues_file = "res://data/map_objects/txt/closed window 1st stage.txt"
+audio = ExtResource("1_15a7r")
 metadata/_custom_type_script = "uid://dmnq1txl08h0i"

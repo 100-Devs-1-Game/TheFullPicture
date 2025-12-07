@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="InteractableObjectData" load_steps=2 format=3 uid="uid://fxuqcatk6qm1"]
+[gd_resource type="Resource" script_class="InteractableObjectData" load_steps=3 format=3 uid="uid://fxuqcatk6qm1"]
 
 [ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_0cj65"]
+[ext_resource type="AudioStream" uid="uid://d3cbehveo7d4w" path="res://assets/voice/artist/stage2/clues/the paper is smooth.mp3" id="1_1jp47"]
 
 [resource]
 script = ExtResource("1_0cj65")
 name = "Neat Page"
 clues_file = "res://data/map_objects/txt/neat page 2st stage.txt"
+audio = ExtResource("1_1jp47")
 metadata/_custom_type_script = "uid://dmnq1txl08h0i"

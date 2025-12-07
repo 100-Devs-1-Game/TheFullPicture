@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxdd5sr1wugxv"
+path="res://.godot/imported/the room is filled.mp3-1bfa1adf078b369b94a8ad279c75dd83.mp3str"
+
+[deps]
+
+source_file="res://assets/voice/artist/stage1/clues/the room is filled.mp3"
+dest_files=["res://.godot/imported/the room is filled.mp3-1bfa1adf078b369b94a8ad279c75dd83.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

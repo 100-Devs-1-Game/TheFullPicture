@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bherrt2hy57u2"
+path="res://.godot/imported/there used to be.mp3-7291960cd3f87b2801a93d70addae8bb.mp3str"
+
+[deps]
+
+source_file="res://assets/voice/artist/stage2/clues/there used to be.mp3"
+dest_files=["res://.godot/imported/there used to be.mp3-7291960cd3f87b2801a93d70addae8bb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
