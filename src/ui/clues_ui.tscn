@@ -51,6 +51,9 @@ bus = &"Sfx"
 stream = ExtResource("5_t1idk")
 bus = &"Sfx"
 
+[node name="AudioStreamPlayer Voice" type="AudioStreamPlayer" parent="."]
+bus = &"Voice"
+
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="meta_clicked" from="CenterContainer/Page/MarginContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]
 [connection signal="meta_hover_ended" from="CenterContainer/Page/MarginContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_hover_ended"]

@@ -4,8 +4,10 @@ extends Control
 @onready var label: RichTextLabel = %RichTextLabel
 @onready var audio_player_open: AudioStreamPlayer = $"AudioStreamPlayer Open"
 @onready var audio_player_clue: AudioStreamPlayer = $"AudioStreamPlayer Clue"
+@onready var audio_player_voice: AudioStreamPlayer = $"AudioStreamPlayer Voice"
 
 var data: InteractableObjectData
+var fade_tween: Tween
 
 
 
@@ -33,11 +35,25 @@ func on_open(p_data: InteractableObjectData):
 	audio_player_open.play()
 	update()
 	show()
-
+	await get_tree().create_timer(0.25).timeout
+	if not visible:
+		return
+	if fade_tween and fade_tween.is_running():
+		fade_tween.kill()
+		audio_player_voice.volume_db= 0
+	audio_player_voice.stop()
+	audio_player_voice.stream= data.audio
+	audio_player_voice.play()
+	
 
 func close():
 	hide()
 	EventManager.clues_ui_closed.emit()
+	if audio_player_voice.playing:
+		assert(not fade_tween or not fade_tween.is_running())
+		fade_tween= create_tween()
+		fade_tween.tween_property(audio_player_voice, "volume_linear", 0.0, 0.5)
+		fade_tween.tween_callback(func(): audio_player_voice.stop())
 
 
 func _on_rich_text_label_meta_hover_started(_meta: Variant) -> void:

@@ -6,7 +6,9 @@ extends Resource
 	set(f):
 		clues_file= f
 		description= FileAccess.get_file_as_string(f)
-		
+
+@export var audio: AudioStream
+
 var description: String
 
 
