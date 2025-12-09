@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="SolutionContainer" load_steps=6 format=3 uid="uid://deiq2vop4hat6"]
+[gd_resource type="Resource" script_class="SolutionContainer" load_steps=7 format=3 uid="uid://deiq2vop4hat6"]
 
 [ext_resource type="Resource" uid="uid://dcro60uc6mfum" path="res://data/stages/stage1/correct_solution.tres" id="1_4xuso"]
 [ext_resource type="Script" uid="uid://c51qqc7u2l22g" path="res://data/solution_data.gd" id="1_qaodv"]
+[ext_resource type="AudioStream" uid="uid://ccxglk3xynp2k" path="res://assets/voice/artist/maybe your still drunk.mp3" id="2_iqqhg"]
 [ext_resource type="Script" uid="uid://bhxo62hq0jf8j" path="res://data/solution_container.gd" id="2_xgokw"]
 [ext_resource type="Resource" uid="uid://b0ho0akp6ni0p" path="res://data/stages/stage1/incorrect_solution1.tres" id="3_iqqhg"]
 [ext_resource type="Resource" uid="uid://cg876sbv6rwpp" path="res://data/stages/stage1/incorrect_solution2.tres" id="4_eebvy"]
@@ -10,4 +11,5 @@
 script = ExtResource("2_xgokw")
 correct_solution = ExtResource("1_4xuso")
 incorrect_solutions = Array[ExtResource("1_qaodv")]([ExtResource("3_iqqhg"), ExtResource("4_eebvy")])
+incorrect_solution_audio = ExtResource("2_iqqhg")
 metadata/_custom_type_script = "uid://bhxo62hq0jf8j"

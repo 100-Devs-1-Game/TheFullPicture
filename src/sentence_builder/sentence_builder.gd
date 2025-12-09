@@ -175,6 +175,8 @@ func verify_solution():
 			popup_label.text= GameData.current_stage.incorrect_dialog
 		else:
 			popup_label.text= GameData.current_stage.fail_dialog
+			audio_player_voice.stream= GameData.current_stage.solution_container.incorrect_solution_audio
+			audio_player_voice.play()
 
 	popup_panel.show()
 

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="StageData" load_steps=24 format=3 uid="uid://dqkupm0q5526b"]
+[gd_resource type="Resource" script_class="StageData" load_steps=25 format=3 uid="uid://dqkupm0q5526b"]
 
 [ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_83drw"]
 [ext_resource type="Resource" uid="uid://dx1l2xf1ym7tw" path="res://data/clues/stage2/artistic.tres" id="2_qt0bw"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://c51qqc7u2l22g" path="res://data/solution_data.gd" id="18_e8qb7"]
 [ext_resource type="AudioStream" uid="uid://dcxn1hglol8jx" path="res://assets/voice/artist/final monolog.mp3" id="18_myblk"]
 [ext_resource type="Script" uid="uid://bhxo62hq0jf8j" path="res://data/solution_container.gd" id="19_myblk"]
+[ext_resource type="AudioStream" uid="uid://ccxglk3xynp2k" path="res://assets/voice/artist/maybe your still drunk.mp3" id="20_le8oq"]
 
 [sub_resource type="Resource" id="Resource_le8oq"]
 script = ExtResource("18_e8qb7")
@@ -30,6 +31,7 @@ metadata/_custom_type_script = "uid://c51qqc7u2l22g"
 [sub_resource type="Resource" id="Resource_6kmoj"]
 script = ExtResource("19_myblk")
 correct_solution = SubResource("Resource_le8oq")
+incorrect_solution_audio = ExtResource("20_le8oq")
 metadata/_custom_type_script = "uid://bhxo62hq0jf8j"
 
 [resource]
