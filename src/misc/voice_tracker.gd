@@ -14,7 +14,7 @@ var music_volume: float:
 func _ready() -> void:
 	assert(audio_player)
 	audio_player.finished.connect(on_finished)
-	tree_exiting.connect(on_finished)
+	tree_exiting.connect(func(): music_volume= GameSettings.music_volume)
 
 
 func _process(_delta: float) -> void:
