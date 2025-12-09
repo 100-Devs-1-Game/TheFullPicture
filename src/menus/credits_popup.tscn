@@ -58,7 +58,9 @@ Aaron Busch
 [u]Programmers[/u]
 Codimon
 game8024
-"
+
+[u]QA[/u]
+Jun Jun"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/HBoxContainer"]
@@ -75,6 +77,7 @@ text = "[u]Sound Designer[/u]
 LANCER
 
 [u]Voice Actor[/u]
+ Danny “clubnesman” Zeidan
 RisibleZombie
 
 [u]Writer[/u]
