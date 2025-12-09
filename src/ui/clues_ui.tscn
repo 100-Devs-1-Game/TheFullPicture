@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bb1i0iuq4cov3"]
+[gd_scene load_steps=8 format=3 uid="uid://bb1i0iuq4cov3"]
 
 [ext_resource type="StyleBox" uid="uid://cp1ijl3m6dhr1" path="res://ui/paper_background.stylebox" id="1_3vhjd"]
 [ext_resource type="Script" uid="uid://p6o8myagmqi1" path="res://ui/clues_ui.gd" id="1_l33hs"]
 [ext_resource type="FontFile" uid="uid://bydy1is6a3qvc" path="res://assets_external/fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Regular.ttf" id="3_l78lp"]
 [ext_resource type="AudioStream" uid="uid://n5ao4dy57orj" path="res://assets/sfx/F0220TFP-ui_menus_k.ogg" id="4_bd0xu"]
 [ext_resource type="AudioStream" uid="uid://certfr5nthwp7" path="res://assets/sfx/F0220TFP-ui_menus_f.ogg" id="5_t1idk"]
+[ext_resource type="Script" uid="uid://trybyfi2ljft" path="res://misc/voice_tracker.gd" id="6_25hg2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l78lp"]
 bg_color = Color(0.16862746, 0.16862746, 0.16862746, 0.6)
@@ -53,6 +54,10 @@ bus = &"Sfx"
 
 [node name="AudioStreamPlayer Voice" type="AudioStreamPlayer" parent="."]
 bus = &"Voice"
+
+[node name="VoiceTracker" type="Node" parent="AudioStreamPlayer Voice"]
+script = ExtResource("6_25hg2")
+metadata/_custom_type_script = "uid://trybyfi2ljft"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="meta_clicked" from="CenterContainer/Page/MarginContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]

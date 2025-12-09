@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cbckjjt724yb2"]
+[gd_scene load_steps=30 format=3 uid="uid://cbckjjt724yb2"]
 
 [ext_resource type="Texture2D" uid="uid://d5kilvwruv80" path="res://assets/art/sentence_builder/UIScreen.png" id="1_0041t"]
 [ext_resource type="Script" uid="uid://1du2ec3qy8pt" path="res://sentence_builder/sentence_builder.gd" id="1_ipavy"]
@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://6imnhiq6qr0g" path="res://assets/sfx/F0220TFP-ui_menus_a.ogg" id="12_cg4df"]
 [ext_resource type="AudioStream" uid="uid://brx0aefm07quo" path="res://assets/sfx/F0220TFP-ui_menus_m.ogg" id="13_srpaq"]
 [ext_resource type="AudioStream" uid="uid://bdvi5vfea7lkx" path="res://assets/sfx/F0220TFP-ui_menus_n.ogg" id="14_wy40q"]
+[ext_resource type="Script" uid="uid://trybyfi2ljft" path="res://misc/voice_tracker.gd" id="15_cg4df"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0sqpq"]
 
@@ -436,6 +437,10 @@ bus = &"Sfx"
 
 [node name="AudioStreamPlayer Voice" type="AudioStreamPlayer" parent="."]
 bus = &"Voice"
+
+[node name="VoiceTracker" type="Node" parent="AudioStreamPlayer Voice"]
+script = ExtResource("15_cg4df")
+metadata/_custom_type_script = "uid://trybyfi2ljft"
 
 [connection signal="pressed" from="Popup Panel/CenterContainer/MarginContainer/Panel Container/VBoxContainer/Try Again Button" to="." method="_on_try_again_button_pressed"]
 [connection signal="pressed" from="Popup Panel/CenterContainer/MarginContainer/Panel Container/VBoxContainer/Continue Button" to="." method="_on_continue_button_pressed"]
