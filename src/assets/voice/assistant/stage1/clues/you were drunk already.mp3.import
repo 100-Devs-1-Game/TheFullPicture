@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyotjtdamyb80"
+path="res://.godot/imported/you were drunk already.mp3-93a8d3859446bb00fd818f86b8fdfcff.mp3str"
+
+[deps]
+
+source_file="res://assets/voice/assistant/stage1/clues/you were drunk already.mp3"
+dest_files=["res://.godot/imported/you were drunk already.mp3-93a8d3859446bb00fd818f86b8fdfcff.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

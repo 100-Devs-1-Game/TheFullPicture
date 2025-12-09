@@ -16,6 +16,7 @@ extends Control
 @onready var audio_player_return_clue: AudioStreamPlayer = $"AudioStreamPlayer Return Clue"
 @onready var audio_player_correct: AudioStreamPlayer = $"AudioStreamPlayer Correct"
 @onready var audio_player_incorrect: AudioStreamPlayer = $"AudioStreamPlayer Incorrect"
+@onready var audio_player_voice: AudioStreamPlayer = $"AudioStreamPlayer Voice"
 
 
 var solution_items: Array[Label]
@@ -180,10 +181,12 @@ func verify_solution():
 
 func solved():
 	solved_painting.texture= GameData.current_stage.solved_painting
+	audio_player_voice.stream= GameData.current_stage.solution_audio
 	GameData.advance_stage()
 	try_again_button.hide()
 	continue_button.show()
-
+	audio_player_voice.play()
+	
 
 func on_start_dragging(button: ClueButton):
 	dragging_button= button

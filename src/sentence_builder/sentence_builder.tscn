@@ -434,6 +434,9 @@ bus = &"Sfx"
 stream = ExtResource("14_wy40q")
 bus = &"Sfx"
 
+[node name="AudioStreamPlayer Voice" type="AudioStreamPlayer" parent="."]
+bus = &"Voice"
+
 [connection signal="pressed" from="Popup Panel/CenterContainer/MarginContainer/Panel Container/VBoxContainer/Try Again Button" to="." method="_on_try_again_button_pressed"]
 [connection signal="pressed" from="Popup Panel/CenterContainer/MarginContainer/Panel Container/VBoxContainer/Continue Button" to="." method="_on_continue_button_pressed"]
 

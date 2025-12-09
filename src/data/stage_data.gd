@@ -6,6 +6,7 @@ extends Resource
 @export var question: String
 @export var solution_container: SolutionContainer
 @export var pre_placed_clues: Dictionary[int, String]
+@export var solution_audio: AudioStream
 
 @export_multiline var correct_dialog: String
 @export_multiline var fail_dialog: String

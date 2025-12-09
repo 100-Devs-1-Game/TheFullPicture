@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="InteractableObjectData" load_steps=2 format=3 uid="uid://dv607luiiy844"]
+[gd_resource type="Resource" script_class="InteractableObjectData" load_steps=3 format=3 uid="uid://dv607luiiy844"]
 
+[ext_resource type="AudioStream" uid="uid://cjh4np7c2fclc" path="res://assets/voice/both/stage1/clues/was there any blood.mp3" id="1_3fxyt"]
 [ext_resource type="Script" uid="uid://dmnq1txl08h0i" path="res://data/interactable_object_data.gd" id="1_sqn80"]
 
 [resource]
 script = ExtResource("1_sqn80")
 clues_file = "res://data/map_objects/txt/floor where the body was 1st stage.txt"
+audio = ExtResource("1_3fxyt")
 metadata/_custom_type_script = "uid://dmnq1txl08h0i"

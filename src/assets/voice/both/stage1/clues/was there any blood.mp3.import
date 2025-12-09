@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjh4np7c2fclc"
+path="res://.godot/imported/was there any blood.mp3-37a291fccbf3aeb414c72f5a75118674.mp3str"
+
+[deps]
+
+source_file="res://assets/voice/both/stage1/clues/was there any blood.mp3"
+dest_files=["res://.godot/imported/was there any blood.mp3-37a291fccbf3aeb414c72f5a75118674.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

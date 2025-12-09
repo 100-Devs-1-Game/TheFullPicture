@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="StageData" load_steps=16 format=3 uid="uid://dc2yaw4w7y3yf"]
+[gd_resource type="Resource" script_class="StageData" load_steps=17 format=3 uid="uid://dc2yaw4w7y3yf"]
 
 [ext_resource type="Script" uid="uid://ct3rmdycaa212" path="res://data/clue_data.gd" id="1_qy5xu"]
 [ext_resource type="Script" uid="uid://36sgsjjy6v27" path="res://data/stage_data.gd" id="2_ejx7n"]
@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://bnme0w3051x6n" path="res://data/clues/stage1/you.tres" id="12_4rclw"]
 [ext_resource type="Texture2D" uid="uid://dx8pqmdv4gs4o" path="res://assets/art/sentence_builder/SolvedPainting1.png" id="12_kcxmc"]
 [ext_resource type="Resource" uid="uid://deiq2vop4hat6" path="res://data/stages/stage1/solution_container.tres" id="14_4kayx"]
+[ext_resource type="AudioStream" uid="uid://looprxd42es1" path="res://assets/voice/both/stage1/full dialog.mp3" id="14_4rclw"]
 
 [resource]
 script = ExtResource("2_ejx7n")
@@ -25,6 +26,7 @@ solution_container = ExtResource("14_4kayx")
 pre_placed_clues = Dictionary[int, String]({
 0: "The"
 })
+solution_audio = ExtResource("14_4rclw")
 correct_dialog = "Assistant: But if it wasn’t you… then who?
 
 The Artist: ...
