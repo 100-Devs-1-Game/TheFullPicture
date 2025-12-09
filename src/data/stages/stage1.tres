@@ -29,7 +29,7 @@ pre_placed_clues = Dictionary[int, String]({
 solution_audio = ExtResource("14_4rclw")
 correct_dialog = "Assistant: But if it wasn’t you… then who?
 
-The Artist: ...
+The Artist: I-...
 
 Assistant: There’s a place we haven’t checked yet. The Director’s Office.
 
@@ -37,7 +37,7 @@ Artist: We aren’t supposed to go in there. Besides, the door is locked.
 
 Assistant: The Police Chief herself gave me the key. 
 
-The Artist: ...
+The Artist: We can't go in there!
 
 Assistant: Someone tried to frame you. We are goingto find out who
 by all means necessary.
